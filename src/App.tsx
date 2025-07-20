@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Home from "./pages/Home";
 import WebDevelopment from "./pages/WebDevelopment";
 import SEO from "./pages/SEO";
+import SEA from "./pages/SEA";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
 
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/web-development" element={<WebDevelopment />} />
             <Route path="/seo" element={<SEO />} />
+            <Route path="/sea" element={<SEA />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
