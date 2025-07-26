@@ -9,11 +9,12 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
+    { name: "UI/UX Design", path: "/ui-ux-design" },
     { name: "Web Development", path: "/web-development" },
     { name: "SEO", path: "/seo" },
     { name: "SEA", path: "/sea" },
-    { name: "Portfolio", path: "#portfolio" },
-    { name: "Contact", path: "#contact" },
+    { name: "Portfolio", path: "/portfolio" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -22,9 +23,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="bg-primary text-primary-foreground px-3 py-1 rounded font-bold text-lg">
-              webbeezwork
-            </div>
+            <img src="/webbeezwork-logo.webp" alt="Webbeezwork Logo" className="h-10 w-auto rounded shadow-lg ring-2 ring-white" />
           </Link>
 
           {/* Desktop Navigation */}
