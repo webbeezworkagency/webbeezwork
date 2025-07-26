@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Users, TrendingUp, Target, Award, Star, Play } from "lucide-react";
+import Footer from "@/components/Footer";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import { useEffect } from "react";
 
-const Home = () => {
+const UIDesign = () => {
   const stats = [
     { number: "12K", label: "Happy Clients", icon: Users },
     { number: "65%", label: "Increase", icon: TrendingUp },
@@ -49,6 +52,21 @@ const Home = () => {
     }
   ];
 
+  // Add scroll reveal effect
+  useEffect(() => {
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    const observer = new window.IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealElements.forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -56,12 +74,12 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-in-up">
                 UI/UX
                 <br />
                 <span className="text-primary">Designing</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-lg">
+              <p className="text-xl text-muted-foreground mb-8 max-w-lg animate-fade-in-up delay-150">
                 Great choice to Validate your design and make your customers happy
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -75,11 +93,11 @@ const Home = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-card rounded-lg p-8 border border-border">
+              <div className="bg-card rounded-lg p-8 border border-border w-64 h-64 flex items-center justify-center mx-auto">
                 <img 
-                  src="/api/placeholder/500/400" 
+                  src="/placeholder.svg" 
                   alt="UI/UX Design Illustration"
-                  className="w-full h-auto rounded-lg"
+                  className="w-52 h-52 rounded-lg object-cover"
                 />
               </div>
             </div>
@@ -88,7 +106,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 reveal-on-scroll">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -138,7 +156,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 reveal-on-scroll bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -162,7 +180,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 reveal-on-scroll">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -197,26 +215,32 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 reveal-on-scroll bg-card">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-primary text-primary-foreground">
-                <CardContent className="p-6">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" />
-                    ))}
-                  </div>
-                  <p className="mb-4">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold">{testimonial.name}</div>
-                    <div className="text-sm opacity-90">{testimonial.role}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Carousel className="relative">
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="px-4">
+                  <Card className="bg-primary text-primary-foreground">
+                    <CardContent className="p-6">
+                      <div className="flex mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 fill-current" />
+                        ))}
+                      </div>
+                      <p className="mb-4">"{testimonial.content}"</p>
+                      <div>
+                        <div className="font-semibold">{testimonial.name}</div>
+                        <div className="text-sm opacity-90">{testimonial.role}</div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
@@ -237,49 +261,9 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="bg-primary text-primary-foreground px-3 py-1 rounded font-bold text-lg mb-4">
-                webbeezwork
-              </div>
-              <p className="text-muted-foreground">
-                Creating digital experiences that drive results and inspire growth.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Services</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>Web Development</li>
-                <li>UI/UX Design</li>
-                <li>SEO Optimization</li>
-                <li>Digital Marketing</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Company</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>About Us</li>
-                <li>Portfolio</li>
-                <li>Contact</li>
-                <li>Blog</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Connect</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>LinkedIn</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
-                <li>Facebook</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
 
-export default Home;
+export default UIDesign;
