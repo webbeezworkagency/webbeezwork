@@ -5,6 +5,24 @@ import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { useEffect, useRef } from "react";
 import heroImage from "@/assets/homehero.png"
+import nextlane from "@/assets/nextlane.png"
+import sapana from "@/assets/sapana.png"
+import tobe from "@/assets/tobo.png"
+import slimfile from "@/assets/slimfile.png"
+import linkedin from "@/assets/linkedin.png"
+import webIcon from "@/assets/webIcon.svg"
+import videoicon from "@/assets/videoIcon.svg"
+import contenticon from "@/assets/contentIcon.svg"
+import socialicon from "@/assets/socialIcon.svg"
+import clickicon from "@/assets/clickicon.svg"
+import searchicon from "@/assets/searchicon.svg"
+import whychoose from "@/assets/whychoose.png"
+import growth from "@/assets/growth.svg"
+import uspa from "@/assets/U-SPA.png"
+import payperclick from "@/assets/PayperClick.png"
+
+
+
 
 
 const Home = () => {
@@ -34,28 +52,58 @@ const Home = () => {
   // Remove useRef and useEffect for marquee
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-black text-foreground">
       {/* Header / Hero Section */}
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden">
+        {/* black decorative elements */}
+        {/* <div className="absolute top-0 left-0 w-32 h-32 bg-yellow-500 rounded-full opacity-80"></div> */}
+        <div className="absolute top-16 right-20 w-4 h-4 bg-yellow-400 rounded-full"></div>
+        {/* <div className="absolute top-32 right-4 w-6 h-6 bg-green-400 rounded transform rotate-45"></div> */}
+        <div className="absolute bottom-20 left-8 w-8 h-8 bg-red-500 rounded transform rotate-45"></div>
+        <div className="absolute bottom-32 right-12 w-6 h-6 bg-yellow-400 rounded transform rotate-45"></div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex-1 md:pl-16">
               <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-                Ghanaian Digital<br />Marketing <span className="text-primary">Agency</span>
+                Ghanaian Digital<br />Marketing{" "}
+                <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-green-400 bg-clip-text text-transparent">
+                  Agency
+                </span>
               </h1>
-              <p className="text-2xl md:text-3xl text-muted-foreground mb-10 max-w-2xl">
-                We ignite your business growth with creative digital marketing solutions.
+              <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+                Tailored strategies. Measurable results. Your success, amplified.
               </p>
-              {/* Wrap the Get Started button in a flex container and center it */}
+              {/* Wrap the Challenge Us button in a flex container and center it */}
               <div className="flex justify-start">
-                <Button size="lg" className="px-10 py-5 text-lg font-bold rounded-full shadow-lg bg-primary hover:bg-primary/90 transition-all duration-200">
-                  Get Started
+                <Button size="lg" className="px-10 py-5 text-lg font-bold rounded-full shadow-lg bg-primary hover:bg-yellow-500 text-black transition-all duration-200">
+                  Challenge Us
                 </Button>
               </div>
             </div>
             <div className="relative">
-              <div className="w-[500px] h-[500px] flex items-center justify-center mx-auto">
-                <img src={heroImage} alt="Professional Digital Marketing Agency" className="object-cover w-full h-full" />
+              {/* Additional black elements around the image */}
+              <div className="absolute -top-8 -left-8 w-20 h-20 bg-yellow-500 rounded-full opacity-60"></div>
+              <div className="absolute top-12 -right-6 flex items-center justify-center">
+
+              </div>
+              {/* <div className="absolute bottom-16 -left-4 w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+          <div className="w-3 h-3 bg-white rounded-full"></div>
+        </div> */}
+              <div className="absolute top-20 right-8 flex space-x-1">
+                <div className="w-2 h-8 bg-yellow-400 rounded"></div>
+                <div className="w-2 h-6 bg-orange-400 rounded"></div>
+                <div className="w-2 h-4 bg-orange-400 rounded"></div>
+              </div>
+              {/* <div className="absolute bottom-8 right-4 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
+          <div className="w-2 h-2 bg-white rounded-full"></div>
+        </div> */}
+
+              <div className="w-[500px] h-[500px] flex items-center justify-center mx-auto relative">
+                {/* Brown/olive black shape behind the image */}
+                {/* <div className="absolute -z-10 w-96 h-96 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-full transform -rotate-12"></div>
+           */}
+                <img src={heroImage} alt="Professional Digital Marketing Agency" className="object-cover w-full h-full relative z-10 rounded-2xl" />
               </div>
             </div>
           </div>
@@ -63,164 +111,283 @@ const Home = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="pt-0 pb-12 px-4 mt-[-24px]">
+      <section className="pt-0 pb-12 px-4 ">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl md:text-4xl font-extrabold mb-8 text-left">Partners</h3>
+          <h3 className="text-4xl md:text-5xl font-bold mb-12">Partners</h3>
           <div className="flex flex-row gap-8 justify-start items-center">
             {/* Nextlane */}
-            <div className="bg-black rounded w-[210px] h-[110px] flex items-center justify-center">
-              <img src="/your-nextlane-logo.png" alt="nextlane" className="h-12 w-auto object-contain" />
+            <div className="bg-black rounded w-[210px] flex items-center justify-center">
+              <img src={nextlane} alt="nextlane" className="h-full w-auto object-contain" />
             </div>
-            {/* Elephant */}
-            <div className="bg-[#232323] rounded w-[210px] h-[110px] flex items-center justify-center">
-              <img src="/your-elephant-logo.png" alt="Elephant" className="h-12 w-auto object-contain" />
+            {/* Sampana */}
+            <div className="bg-[#232323] rounded w-[210px] flex items-center justify-center">
+              <img src={sapana} alt="Elephant" className="h-full w-auto object-contain" />
             </div>
             {/* ToBee */}
             <div className="bg-[#fff35c] rounded w-[210px] h-[110px] flex items-center justify-center">
-              <img src="/your-tobee-logo.png" alt="ToBee" className="h-12 w-auto object-contain" />
+              <img src={tobe} alt="ToBee" className="w-auto object-contain" />
             </div>
-            {/* Arrow */}
+            {/* SlimFile*/}
             <div className="bg-transparent rounded w-[210px] h-[110px] flex items-center justify-center">
-              <img src="/your-arrow-logo.png" alt="Arrow" className="h-12 w-auto object-contain" />
+              <img src={slimfile} alt="Arrow" className="w-auto object-contain" />
             </div>
             {/* LinkedIn */}
             <div className="bg-[#232323] rounded w-[210px] h-[110px] flex items-center justify-center">
-              <img src="/your-linkedin-logo.png" alt="LinkedIn" className="h-12 w-auto object-contain" />
+              <img src={linkedin} alt="LinkedIn" className=" w-auto object-contain" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Expertise Section */}
-      <section className="py-12 px-4 bg-card border-b border-border reveal-on-scroll">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h2 className="text-2xl font-bold mb-4 text-primary">Our Digital Marketing Expertise</h2>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>SEO & SEM</li>
-              <li>Content Marketing</li>
-              <li>Social Media Strategy</li>
-              <li>Branding & Design</li>
-              <li>Campaign Management</li>
-            </ul>
+      <section className="py-12 px-4 border-b border-border reveal-on-scroll bg-black">
+        <div className="max-w-6xl mx-auto">
+          {/* Top row - Title and description first on mobile, then 2 service cards below on lg */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            {/* Right side - Title and description - on top for mobile, right for lg */}
+            <div className="lg:col-span-1 order-1">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-yellow-300 font-rubik">Our Digital Marketing Expertise</h2>
+              <p className="text-gray-400 text-base lg:text-lg font-rubik">
+                We have a team of experienced and trained professionals who have the ability to transform traffic for your business
+              </p>
+            </div>
+            {/* Left side - First 2 service cards - below on mobile, left for lg */}
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 order-2 lg:order-none">
+              {/* Search Engine Optimization */}
+              <div className="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[160px]">
+                <div className="w-12 h-12 mb-4 text-yellow-400 flex-shrink-0">
+                  <img src={searchicon} alt="Search" className="w-full h-full object-contain" />
+                </div>
+                <h3 className="text-white text-lg font-semibold flex-grow">Search Engine Optimization</h3>
+              </div>
+
+              {/* Website design & Development */}
+              <div className="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[160px]">
+                <div className="w-12 h-12 mb-4 text-yellow-400 flex-shrink-0">
+                  <img src={webIcon} alt="Web" className="w-full h-full object-contain" />
+                </div>
+                <h3 className="text-white text-lg font-semibold flex-grow">Website design & Development</h3>
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Card className="bg-background border-border">
-              <CardContent className="p-4">
-                <div className="font-bold text-lg">SEO</div>
-                <div className="text-sm text-muted-foreground">Boost your search rankings</div>
-              </CardContent>
-            </Card>
-            <Card className="bg-background border-border">
-              <CardContent className="p-4">
-                <div className="font-bold text-lg">Content</div>
-                <div className="text-sm text-muted-foreground">Engage your audience</div>
-              </CardContent>
-            </Card>
-            <Card className="bg-background border-border">
-              <CardContent className="p-4">
-                <div className="font-bold text-lg">Social Media</div>
-                <div className="text-sm text-muted-foreground">Grow your brand</div>
-              </CardContent>
-            </Card>
-            <Card className="bg-background border-border">
-              <CardContent className="p-4">
-                <div className="font-bold text-lg">Strategy</div>
-                <div className="text-sm text-muted-foreground">Results-driven campaigns</div>
-              </CardContent>
-            </Card>
+
+          {/* Bottom row - Remaining 4 service cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Video editing & Production */}
+            <div className="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[160px]">
+              <div className="w-12 mb-4 text-yellow-400 flex-shrink-0">
+                <img src={videoicon} alt="Video" className="w-full" />
+              </div>
+              <h3 className="text-white py-12 text-lg font-semibold flex-grow">Video editing & Production</h3>
+            </div>
+
+            {/* Content Writing */}
+            <div className="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[160px]">
+              <div className="w-12 mb-4 text-yellow-400 flex-shrink-0">
+                <img src={contenticon} alt="Content" className="w-full" />
+              </div>
+              <h3 className="text-white text-lg py-9 font-semibold flex-grow">Content Writing</h3>
+            </div>
+
+            {/* Social media Marketing */}
+            <div className="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[160px]">
+              <div className="w-12 mb-4 text-yellow-400 flex-shrink-0">
+                <img src={socialicon} alt="Social" className="w-full" />
+              </div>
+              <h3 className="text-white text-lg py-9 font-semibold flex-grow">Social media Marketing</h3>
+            </div>
+
+            {/* Pay per click (PPC) */}
+            <div className="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[160px]">
+              <div className="w-12 mb-4 text-yellow-400 flex-shrink-0">
+                <img src={clickicon} alt="Click" className="w-full" />
+              </div>
+              <h3 className="text-white text-lg py-5 font-semibold flex-grow">Pay per click (PPC)</h3>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-12 px-4 bg-background border-b border-border reveal-on-scroll">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-center">
-          <div className="flex-1 flex justify-center">
-            <img src="/placeholder.svg" alt="Why Choose Us" className="w-48 h-48 rounded-lg object-cover" />
+      <section className="py-12 px-4 bg-black border-b border-border reveal-on-scroll">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+          <div className="flex-1 flex justify-center relative">
+            {/* Main person image - you'll replace this */}
+            <div className="relative">
+              <img
+                src={whychoose}
+                alt="Team member pointing to success metrics"
+                className=" rounded-2xl object-cover"
+              />
+
+
+
+              {/* Customer avatars overlay */}
+              <div className="absolute -top-4 -right-8 bg-white rounded-full shadow-lg p-2 flex items-center gap-1">
+                <div className="flex -space-x-2">
+                  <div className="w-8 h-8 bg-gray-300 rounded-full border-2 border-white"></div>
+                  <div className="w-8 h-8 bg-blue-400 rounded-full border-2 border-white"></div>
+                  <div className="w-8 h-8 bg-green-400 rounded-full border-2 border-white"></div>
+                  <div className="w-8 h-8 bg-red-500 rounded-full border-2 border-white"></div>
+                </div>
+                <span className="text-yellow-600 font-bold text-sm ml-2">+25K</span>
+              </div>
+
+              {/* Yellow black shape */}
+              <div className="absolute -z-10 -right-4 top-8 w-64 h-72 bg-yellow-400 rounded-[2rem] transform rotate-12"></div>
+            </div>
           </div>
+
           <div className="flex-1">
-            <h3 className="text-2xl font-bold mb-4">Why should you choose Webbeezwork?</h3>
-            <p className="text-muted-foreground mb-4">
-              At Webbeezwork, we transform how Ghanaian businesses connect, engage, and grow. Our team delivers innovative marketing, SEO, and creative solutions tailored for your success.
+            <h3 className="text-3xl font-bold mb-6 leading-tight">
+              At Webbezzwork, we transform raw data into smart strategies that drive real results
+            </h3>
+            <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
+              By digging deep into customer behavior and market trends, we turn insights into tailored
+              campaigns that connect, engage, and convert.
             </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-background font-bold rounded-full shadow-lg px-8 py-3 hover:from-yellow-500 hover:to-yellow-700 transition-all duration-200 border-none"
-            >
-              Learn More
-            </Button>
+            <button className="bg-primary hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
+              Contact us
+            </button>
           </div>
         </div>
       </section>
 
+      {/* Growth Section */}
+
+      <section className="py-12 px-4 bg-black reveal-on-scroll">
+        <div className="max-w-7xl mx-auto flex items-center justify-center">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-0 text-white flex items-center">
+            Let’s Ignite
+            <span className="text-yellow-400 ml-2">Your Growth</span>
+            <img src={growth} alt="Growth" className="w-12 h-12 ml-2" />
+          </h2>
+        </div>
+      </section>
+
       {/* Latest Work Section */}
-      <section className="py-12 px-4 bg-card border-b border-border reveal-on-scroll">
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-2xl font-bold mb-8">Our latest work</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="bg-background border-border">
-              <CardContent className="p-4">
-                <img src="/placeholder.svg" alt="Project 1" className="w-full h-32 object-cover rounded mb-2" />
-                <div className="font-semibold">Saaapa - Digital Marketing</div>
-                <div className="text-sm text-muted-foreground">SEO, SEM, Social Media</div>
-              </CardContent>
-            </Card>
-            <Card className="bg-background border-border">
-              <CardContent className="p-4">
-                <img src="/placeholder.svg" alt="Project 2" className="w-full h-32 object-cover rounded mb-2" />
-                <div className="font-semibold">LSMA - Search Engine Optimization</div>
-                <div className="text-sm text-muted-foreground">Content, SEO, Analytics</div>
-              </CardContent>
-            </Card>
-            <Card className="bg-background border-border">
-              <CardContent className="p-4">
-                <img src="/placeholder.svg" alt="Project 3" className="w-full h-32 object-cover rounded mb-2" />
-                <div className="font-semibold">BNIC - Pay per click</div>
-                <div className="text-sm text-muted-foreground">PPC, SEM, Campaigns</div>
-              </CardContent>
-            </Card>
+      <section className="py-16 px-4 bg-black text-white reveal-on-scroll">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12">Our latest work</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            {/* Sapana - Digital Marketing Campaign */}
+            <div className="group cursor-pointer">
+              <div className="mb-6 overflow-hidden rounded-2xl">
+                <img
+                  src={sapana}
+                  alt="Sapana Digital Marketing Campaign"
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
+                Sapana - Digital Marketing campaign
+              </h3>
+              <p className="text-gray-400 text-base leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod
+              </p>
+            </div>
+
+            {/* U-SPA - Search engine Optimization */}
+            <div className="group cursor-pointer">
+              <div className="mb-6 overflow-hidden rounded-2xl">
+                <img
+                  src={uspa}
+                  alt="U-SPA Search Engine Optimization"
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
+                U-SPA - Search engine Optimization
+              </h3>
+              <p className="text-gray-400 text-base leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod
+              </p>
+            </div>
+
+            {/* Basic - Pay per click (PPC) */}
+            <div className="group cursor-pointer">
+              <div className="mb-6 overflow-hidden rounded-2xl">
+                <img
+                  src={payperclick}
+                  alt="Basic Pay per click PPC"
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
+                Basic - Pay per click (PPC)
+              </h3>
+              <p className="text-gray-400 text-base leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 px-4 bg-background border-b border-border reveal-on-scroll">
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-2xl font-bold mb-8">Testimonials</h3>
-          <Carousel className="relative">
-            <CarouselContent>
-              <CarouselItem className="px-4">
-                <Card className="bg-primary text-primary-foreground">
-                  <CardContent className="p-4">
-                    <div className="font-semibold mb-2">John Doe</div>
-                    <div className="text-sm mb-2">"Webbeezwork helped us grow our business online!"</div>
-                    <div className="text-xs">CEO, Saaapa</div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-              <CarouselItem className="px-4">
-                <Card className="bg-primary text-primary-foreground">
-                  <CardContent className="p-4">
-                    <div className="font-semibold mb-2">Jane Smith</div>
-                    <div className="text-sm mb-2">"Amazing results and great communication."</div>
-                    <div className="text-xs">Marketing Lead, LSMA</div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-              <CarouselItem className="px-4">
-                <Card className="bg-primary text-primary-foreground">
-                  <CardContent className="p-4">
-                    <div className="font-semibold mb-2">Kwame Nkrumah</div>
-                    <div className="text-sm mb-2">"Professional and creative team!"</div>
-                    <div className="text-xs">Founder, BNIC</div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+      <section className="py-16 px-4 bg-black text-white reveal-on-scroll">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12">Testimonials</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {/* Testimonial 1 - Zoe Mantis */}
+            <div className="bg-primary text-black p-8 rounded-2xl">
+              <div className="flex items-center gap-4 mb-6">
+                <img
+                  src="/placeholder.svg"
+                  alt="Zoe Mantis"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <h4 className="font-bold text-lg">Zoe Mantis</h4>
+                  <p className="text-sm font-medium">Founder, Alpha Group</p>
+                </div>
+              </div>
+              <p className="text-base leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod
+              </p>
+            </div>
+
+            {/* Testimonial 2 - Don Joe */}
+            <div className="bg-primary text-black p-8 rounded-2xl">
+              <div className="flex items-center gap-4 mb-6">
+                <img
+                  src="/placeholder.svg"
+                  alt="Don Joe"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <h4 className="font-bold text-lg">Don Joe</h4>
+                  <p className="text-sm font-medium">Founder, Alpha Group</p>
+                </div>
+              </div>
+              <p className="text-base leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod
+              </p>
+            </div>
+
+            {/* Testimonial 3 - Zoe Mantis */}
+            <div className="bg-primary text-black p-8 rounded-2xl">
+              <div className="flex items-center gap-4 mb-6">
+                <img
+                  src="/placeholder.svg"
+                  alt="Zoe Mantis"
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <h4 className="font-bold text-lg">Zoe Mantis</h4>
+                  <p className="text-sm font-medium">Founder, Alpha Group</p>
+                </div>
+              </div>
+              <p className="text-base leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirm
+              </p>
+            </div>
+
+          </div>
         </div>
       </section>
 
