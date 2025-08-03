@@ -3,9 +3,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import UIDesign from "./pages/Home";
-import NewHome from "./pages/NewHome";
+import UIDesign from "./pages/Ui";
+import Home from "./pages/Home";
 import WebDevelopment from "./pages/WebDevelopment";
 import SEO from "./pages/SEO";
 import SEA from "./pages/SEA";
@@ -25,7 +24,7 @@ const App = () => (
         <div className="min-h-screen bg-background text-foreground">
           <Navigation />
           <Routes>
-            <Route path="/" element={<NewHome />} />
+            <Route path="/" element={<Home />} />
             <Route path="/ui-ux-design" element={<UIDesign />} />
             <Route path="/web-development" element={<WebDevelopment />} />
             <Route path="/seo" element={<SEO />} />

@@ -1,58 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Users, TrendingUp, Target, Award, Star, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import heroImage from "@/assets/homehero.png"
 
-const UIDesign = () => {
-  const stats = [
-    { number: "12K", label: "Happy Clients", icon: Users },
-    { number: "65%", label: "Increase", icon: TrendingUp },
-    { number: "5K", label: "Projects", icon: Target },
-    { number: "80%", label: "Retention", icon: Award },
-  ];
 
-  const services = [
-    {
-      title: "Logo Design",
-      description: "Professional logo design that represents your brand identity.",
-      image: "/api/placeholder/300/200"
-    },
-    {
-      title: "Social Media Design", 
-      description: "Eye-catching social media graphics and templates.",
-      image: "/api/placeholder/300/200"
-    },
-    {
-      title: "Print Design",
-      description: "High-quality print materials for your business needs.",
-      image: "/api/placeholder/300/200"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Marketing Manager",
-      content: "Webbeezwork transformed our online presence with their exceptional design skills.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Business Owner", 
-      content: "The team delivered beyond our expectations. Highly recommended!",
-      rating: 5
-    },
-    {
-      name: "Emily Davis",
-      role: "Startup Founder",
-      content: "Professional, creative, and reliable. Perfect partner for our growth.",
-      rating: 5
-    }
-  ];
-
-  // Add scroll reveal effect
+const Home = () => {
   useEffect(() => {
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
     const observer = new window.IntersectionObserver((entries) => {
@@ -67,176 +22,201 @@ const UIDesign = () => {
     return () => observer.disconnect();
   }, []);
 
+  const logos = [
+    "/placeholder.svg",
+    "/placeholder.svg",
+    "/placeholder.svg",
+    "/placeholder.svg",
+    "/placeholder.svg",
+    "/placeholder.svg",
+  ];
+
+  // Remove useRef and useEffect for marquee
+
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Header / Hero Section */}
+      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-in-up">
-                UI/UX
-                <br />
-                <span className="text-primary">Designing</span>
+            <div className="flex-1 md:pl-16">
+              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Ghanaian Digital<br />Marketing <span className="text-primary">Agency</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-lg animate-fade-in-up delay-150">
-                Great choice to Validate your design and make your customers happy
+              <p className="text-2xl md:text-3xl text-muted-foreground mb-10 max-w-2xl">
+                We ignite your business growth with creative digital marketing solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Get Quote
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  <Play className="w-4 h-4 mr-2" />
-                  Watch Video
+              {/* Wrap the Get Started button in a flex container and center it */}
+              <div className="flex justify-start">
+                <Button size="lg" className="px-10 py-5 text-lg font-bold rounded-full shadow-lg bg-primary hover:bg-primary/90 transition-all duration-200">
+                  Get Started
                 </Button>
               </div>
             </div>
             <div className="relative">
-              <div className="bg-card rounded-lg p-8 border border-border w-64 h-64 flex items-center justify-center mx-auto">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="UI/UX Design Illustration"
-                  className="w-52 h-52 rounded-lg object-cover"
-                />
+              <div className="w-[500px] h-[500px] flex items-center justify-center mx-auto">
+                <img src={heroImage} alt="Professional Digital Marketing Agency" className="object-cover w-full h-full" />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="pt-0 pb-12 px-4 mt-[-24px]">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-3xl md:text-4xl font-extrabold mb-8 text-left">Partners</h3>
+          <div className="flex flex-row gap-8 justify-start items-center">
+            {/* Nextlane */}
+            <div className="bg-black rounded w-[210px] h-[110px] flex items-center justify-center">
+              <img src="/your-nextlane-logo.png" alt="nextlane" className="h-12 w-auto object-contain" />
+            </div>
+            {/* Elephant */}
+            <div className="bg-[#232323] rounded w-[210px] h-[110px] flex items-center justify-center">
+              <img src="/your-elephant-logo.png" alt="Elephant" className="h-12 w-auto object-contain" />
+            </div>
+            {/* ToBee */}
+            <div className="bg-[#fff35c] rounded w-[210px] h-[110px] flex items-center justify-center">
+              <img src="/your-tobee-logo.png" alt="ToBee" className="h-12 w-auto object-contain" />
+            </div>
+            {/* Arrow */}
+            <div className="bg-transparent rounded w-[210px] h-[110px] flex items-center justify-center">
+              <img src="/your-arrow-logo.png" alt="Arrow" className="h-12 w-auto object-contain" />
+            </div>
+            {/* LinkedIn */}
+            <div className="bg-[#232323] rounded w-[210px] h-[110px] flex items-center justify-center">
+              <img src="/your-linkedin-logo.png" alt="LinkedIn" className="h-12 w-auto object-contain" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Expertise Section */}
+      <section className="py-12 px-4 bg-card border-b border-border reveal-on-scroll">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h2 className="text-2xl font-bold mb-4 text-primary">Our Digital Marketing Expertise</h2>
+            <ul className="space-y-3 text-muted-foreground">
+              <li>SEO & SEM</li>
+              <li>Content Marketing</li>
+              <li>Social Media Strategy</li>
+              <li>Branding & Design</li>
+              <li>Campaign Management</li>
+            </ul>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <Card className="bg-background border-border">
+              <CardContent className="p-4">
+                <div className="font-bold text-lg">SEO</div>
+                <div className="text-sm text-muted-foreground">Boost your search rankings</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-background border-border">
+              <CardContent className="p-4">
+                <div className="font-bold text-lg">Content</div>
+                <div className="text-sm text-muted-foreground">Engage your audience</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-background border-border">
+              <CardContent className="p-4">
+                <div className="font-bold text-lg">Social Media</div>
+                <div className="text-sm text-muted-foreground">Grow your brand</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-background border-border">
+              <CardContent className="p-4">
+                <div className="font-bold text-lg">Strategy</div>
+                <div className="text-sm text-muted-foreground">Results-driven campaigns</div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Why Our Clients Trust Us
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We deliver exceptional results that help businesses grow and succeed in the digital landscape.
-            </p>
+      <section className="py-12 px-4 bg-background border-b border-border reveal-on-scroll">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+          <div className="flex-1 flex justify-center">
+            <img src="/placeholder.svg" alt="Why Choose Us" className="w-48 h-48 rounded-lg object-cover" />
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <img 
-                src="/api/placeholder/600/400" 
-                alt="Our Design Process"
-                className="w-full h-auto rounded-lg"
-              />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-6">Our Design Expertise</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">User-Centered Design</h4>
-                    <p className="text-muted-foreground">Creating intuitive interfaces that users love</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Brand Consistency</h4>
-                    <p className="text-muted-foreground">Maintaining brand identity across all touchpoints</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Performance Optimization</h4>
-                    <p className="text-muted-foreground">Fast, efficient, and scalable solutions</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold mb-4">Why should you choose Webbeezwork?</h3>
+            <p className="text-muted-foreground mb-4">
+              At Webbeezwork, we transform how Ghanaian businesses connect, engage, and grow. Our team delivers innovative marketing, SEO, and creative solutions tailored for your success.
+            </p>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-background font-bold rounded-full shadow-lg px-8 py-3 hover:from-yellow-500 hover:to-yellow-700 transition-all duration-200 border-none"
+            >
+              Learn More
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 reveal-on-scroll bg-card">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Our business strategy has helped many
-              <br />
-              businesses across the globe
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="w-8 h-8 text-primary" />
-                </div>
-                <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Clear, Visible and
-              <br />
-              Eye Catching Designs
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We create stunning visuals that capture attention and drive engagement for your brand.
-            </p>
-          </div>
-
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-foreground mb-8">Our latest work</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <Card key={index} className="bg-card border-border hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-48 object-cover rounded-lg mb-4"
-                    />
-                    <h4 className="text-lg font-semibold text-foreground mb-2">{service.title}</h4>
-                    <p className="text-muted-foreground">{service.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+      {/* Latest Work Section */}
+      <section className="py-12 px-4 bg-card border-b border-border reveal-on-scroll">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-2xl font-bold mb-8">Our latest work</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="bg-background border-border">
+              <CardContent className="p-4">
+                <img src="/placeholder.svg" alt="Project 1" className="w-full h-32 object-cover rounded mb-2" />
+                <div className="font-semibold">Saaapa - Digital Marketing</div>
+                <div className="text-sm text-muted-foreground">SEO, SEM, Social Media</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-background border-border">
+              <CardContent className="p-4">
+                <img src="/placeholder.svg" alt="Project 2" className="w-full h-32 object-cover rounded mb-2" />
+                <div className="font-semibold">LSMA - Search Engine Optimization</div>
+                <div className="text-sm text-muted-foreground">Content, SEO, Analytics</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-background border-border">
+              <CardContent className="p-4">
+                <img src="/placeholder.svg" alt="Project 3" className="w-full h-32 object-cover rounded mb-2" />
+                <div className="font-semibold">BNIC - Pay per click</div>
+                <div className="text-sm text-muted-foreground">PPC, SEM, Campaigns</div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 reveal-on-scroll bg-card">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-12 px-4 bg-background border-b border-border reveal-on-scroll">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-2xl font-bold mb-8">Testimonials</h3>
           <Carousel className="relative">
             <CarouselContent>
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="px-4">
-                  <Card className="bg-primary text-primary-foreground">
-                    <CardContent className="p-6">
-                      <div className="flex mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
-                        ))}
-                      </div>
-                      <p className="mb-4">"{testimonial.content}"</p>
-                      <div>
-                        <div className="font-semibold">{testimonial.name}</div>
-                        <div className="text-sm opacity-90">{testimonial.role}</div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
+              <CarouselItem className="px-4">
+                <Card className="bg-primary text-primary-foreground">
+                  <CardContent className="p-4">
+                    <div className="font-semibold mb-2">John Doe</div>
+                    <div className="text-sm mb-2">"Webbeezwork helped us grow our business online!"</div>
+                    <div className="text-xs">CEO, Saaapa</div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+              <CarouselItem className="px-4">
+                <Card className="bg-primary text-primary-foreground">
+                  <CardContent className="p-4">
+                    <div className="font-semibold mb-2">Jane Smith</div>
+                    <div className="text-sm mb-2">"Amazing results and great communication."</div>
+                    <div className="text-xs">Marketing Lead, LSMA</div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+              <CarouselItem className="px-4">
+                <Card className="bg-primary text-primary-foreground">
+                  <CardContent className="p-4">
+                    <div className="font-semibold mb-2">Kwame Nkrumah</div>
+                    <div className="text-sm mb-2">"Professional and creative team!"</div>
+                    <div className="text-xs">Founder, BNIC</div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
@@ -244,26 +224,10 @@ const UIDesign = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Let's Ignite Your Growth!
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Ready to transform your digital presence? Let's create something amazing together.
-          </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Start Your Project
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
-        </div>
-      </section>
-
-      {/* Footer */}
+      {/* Footer Section */}
       <Footer />
     </div>
   );
 };
 
-export default UIDesign;
+export default Home; 
