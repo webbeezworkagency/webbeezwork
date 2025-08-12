@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Target, TrendingUp, DollarSign, Users, BarChart3, Zap } from "lucide-react";
+import sea from "@/assets/seo.png"
+import Footer from "@/components/Footer";
+
+
 
 const SEA = () => {
   const achievements = [
@@ -9,7 +13,7 @@ const SEA = () => {
       description: "Strategic paid advertising campaigns that maximize your ROI and drive qualified traffic to your business.",
       features: [
         "Google Ads & Bing Ads management for maximum reach",
-        "Facebook, Instagram & LinkedIn advertising campaigns", 
+        "Facebook, Instagram & LinkedIn advertising campaigns",
         "Targeted social media strategies and audience optimization",
         "Performance tracking and competitive analysis insights"
       ]
@@ -34,7 +38,7 @@ const SEA = () => {
       features: ["Search Campaigns", "Display Network", "Shopping Ads", "YouTube Advertising"]
     },
     {
-      title: "Social Media Advertising", 
+      title: "Social Media Advertising",
       description: "Targeted social media ads that reach your ideal customers where they spend their time.",
       features: ["Facebook Ads", "Instagram Campaigns", "LinkedIn B2B Ads", "Twitter Promotion"]
     },
@@ -45,94 +49,119 @@ const SEA = () => {
     }
   ];
 
+  function handleViewPortfolioClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
+    event.preventDefault();
+    window.location.href = "/portfolio";
+  }
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              IGNITE YOUR GROWTH, DOMINATE
+      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Image - Replace src with your code image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${sea})`,
+          }}
+        />
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Ignite Your Growth,
               <br />
-              <span className="text-primary">SEARCH</span>
+              Dominate 
+                          <span className="bg-gradient-to-r from-yellow-400 via-primary to-yellow-400 bg-clip-text text-transparent ml-1">
+
+               Search
+            </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Accelerate your business growth with targeted search engine advertising campaigns that deliver results.
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl">
+              We craft data-driven SEA campaigns that deliver measurable results and maximize your ROI.
             </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Start Campaign
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            <div className="flex gap-4">
+              <button className="bg-primary hover:bg-yellow-500 text-black font-semibold px-8 py-4 text-lg rounded-lg transition-colors">
+                Get Free SEO Audit
+              </button>
+              <button
+                onClick={handleViewPortfolioClick}
+                className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 text-lg rounded-lg transition-colors"
+              >
+                View Portfolio
+              </button>
+            </div>
           </div>
         </div>
+
+        {/* Gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent z-0" />
       </section>
 
       {/* Achievement Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-foreground mb-6">
-                Achieve online exposure at every level
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Our comprehensive paid advertising strategies ensure your business gets maximum visibility across all digital advertising platforms.
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <p className="text-muted-foreground">Google Ads & Bing Ads management for maximum reach</p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Achieve Online Visibility & ROI with Targeted Ads              </h2>
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                Boost your brand’s presence on search engine instantly. Reach your ideal customers precisely when they’re ready to buy, ensuring rapid growth and measurable returns.              </p>
+
+              <button className="bg-primary text-black px-6 py-3 rounded-lg font-medium hover:bg-yellow-300 transition-colors">
+                Discover More
+              </button>
+            </div>
+
+            <div className="relative">
+              <div className="border border-primary rounded-2xl p-8 bg-black">
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-primary text-lg leading-relaxed">
+                      Implement and optimize ad campaigns across all platforms.
+                      Focus: Google Ads, Microsoft Advertising, Social Media Ads.                    </p>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <p className="text-muted-foreground">Facebook, Instagram & LinkedIn advertising campaigns</p>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-primary text-lg leading-relaxed">
+                      Generate qualified leads and immediate sales.
+                      Focus: Track conversions, optimize bids for maximum ROI.                    </p>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <p className="text-muted-foreground">Targeted social media strategies and audience optimization</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <p className="text-muted-foreground">Performance tracking and competitive analysis insights</p>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-primary text-lg leading-relaxed">
+                      Dominate competitive ad spaces and increase market share.
+                      Focus: Ad copy testing, competitive analysis, budget allocation.                    </p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="relative">
-              <img 
-                src="/api/placeholder/600/400" 
-                alt="SEA Strategy Visualization"
-                className="w-full h-auto rounded-lg"
-              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Quote Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-card rounded-lg p-8 text-center border border-border">
-            <blockquote className="text-2xl font-medium text-foreground mb-6">
-              "Webbeezwork integrates paid search, keyword research, trends, SEO, social media, and competitive insights into one powerful, easy-to-navigate platform."
-            </blockquote>
-            <div className="flex items-center justify-center gap-4">
-              <img 
-                src="/api/placeholder/60/60" 
-                alt="Client testimonial"
-                className="w-12 h-12 rounded-full"
-              />
-              <div className="text-left">
-                <div className="font-semibold text-foreground">Michael Rodriguez</div>
-                <div className="text-sm text-muted-foreground">Performance Marketing Lead</div>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black">
+        <div className="max-w-4xl mx-auto text-center">
+          <blockquote className="text-3xl lg:text-4xl font-medium text-white mb-12 leading-relaxed">
+            "Webbeezwork unifies keyword research, trends, SEO, social media, and competitor insights into one powerful platform."
+          </blockquote>
+
+          <div className="flex flex-col items-center gap-4">
+            <img
+              src="https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvdXBsb2FkZWQvaW1nXzJuNGg2c2ZocjJ1TTJSclNEYVJKazBXYmZ5cSJ9?height=200&width=200&quality=100&fit=crop"
+              alt="Results-Driven Online Marketing Expert"
+              className="w-20 h-20 rounded-full object-cover"
+            />
+            <div className="text-center">
+              <div className="text-white text-lg">
+                Emile van de Klok Marketing Expert at Webbeezwork
               </div>
             </div>
           </div>
@@ -140,122 +169,71 @@ const SEA = () => {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Globally trusted, award-winning tools used by top companies
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+              Proven Results That Drive Business Growth
             </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Our data-driven approach delivers measurable results across all advertising platforms
+            </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="w-8 h-8 text-primary" />
+                <div className="flex justify-center mb-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                    <stat.icon className="w-8 h-8 text-primary" />
+                  </div>
                 </div>
-                <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
+                <div className="text-5xl lg:text-6xl font-bold text-primary mb-4">
+                  {stat.number}
+                </div>
+                <div className="text-white text-lg leading-relaxed max-w-xs mx-auto">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Insights Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Unlock More Insights with Bigger SEO Data
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get access to comprehensive advertising data and insights that drive better decision-making for your paid campaigns.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <img 
-                src="/api/placeholder/600/400" 
-                alt="SEA Analytics Dashboard"
-                className="w-full h-auto rounded-lg"
-              />
-            </div>
-            <div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {insights.map((insight, index) => (
-                  <Card key={index} className="bg-secondary text-center border-border">
-                    <CardContent className="p-6">
-                      <div className="text-3xl font-bold text-primary mb-2">{insight.value}</div>
-                      <div className="text-muted-foreground">{insight.label}</div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              View All Insights
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Services Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Search Engine Advertising Services
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Comprehensive paid advertising solutions that drive qualified traffic and maximize your return on investment.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="bg-background border-border">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-foreground mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+              <div key={index} className="bg-black border border-gray-800 rounded-xl p-8 hover:border-primary/50 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                <ul className="space-y-3">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-gray-300">
+                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Start exploring Webbeezwork today
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Get started with our comprehensive SEA tools and take your advertising campaigns to the next level.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Get Free Campaign Audit
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              View Case Studies
-            </Button>
-          </div>
-        </div>
-      </section>
+      <Footer />
     </div>
   );
 };

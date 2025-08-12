@@ -1,8 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Code, Smartphone, Globe, Shield, Zap, Users } from "lucide-react";
+import { Code, Smartphone, Globe, Shield, Zap, Users } from "lucide-react";
+import { useState } from "react";
+import development from "@/assets/development.png"
+import feautures from "@/assets/features.png"
+import Footer from "@/components/Footer";
 
 const WebDevelopment = () => {
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+
+  const handleViewPortfolioClick = () => {
+    const projectsSection = document.getElementById('projects-section');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const nextProject = () => {
+    setCurrentProjectIndex((prev) => (prev + 1) % projectShowcase.length);
+  };
+
+  const prevProject = () => {
+    setCurrentProjectIndex((prev) => (prev - 1 + projectShowcase.length) % projectShowcase.length);
+  };
+
   const services = [
     {
       title: "Full-Stack Development",
@@ -63,97 +87,177 @@ const WebDevelopment = () => {
     }
   ];
 
-  const stats = [
-    { number: "16B", label: "Websites Created", icon: Globe },
-    { number: "200", label: "SDLM Experts", icon: Users },
-    { number: "505M", label: "SSL Certificates", icon: Shield },
-    { number: "53T", label: "Data Transfer", icon: Zap }
+  const projectShowcase = [
+    {
+      title: "Web App for a Brain Science",
+      highlight: "Startup",
+      image: "/api/placeholder/600/400",
+      challenge: "The client, an award-winning health-tech company specializing in neuroscience, aimed to streamline onboarding, improve 3D model report generation, and efficiently manage operations.",
+      solution: "We developed a web portal with a custom UI optimized for mobile devices, enabling users to view results through 3D models. It also improves the management of customer requests and streamlines user interactions, transactions, and processes."
+    },
+    {
+      title: "E-commerce Platform for Global",
+      highlight: "Retail Chain",
+      image: "/api/placeholder/600/400",
+      challenge: "A leading retail company needed a scalable e-commerce solution to handle millions of transactions daily while providing personalized shopping experiences across multiple markets.",
+      solution: "We built a microservices-based e-commerce platform with advanced AI-driven recommendations, real-time inventory management, and multi-currency support, resulting in 40% increased conversion rates."
+    },
+    {
+      title: "FinTech Dashboard for Investment",
+      highlight: "Management",
+      image: "/api/placeholder/600/400",
+      challenge: "An investment firm required a comprehensive dashboard to visualize complex financial data, manage portfolios, and provide real-time market insights for their clients.",
+      solution: "We created a sophisticated web application with interactive charts, real-time data feeds, automated reporting, and secure client portals, enhancing decision-making and client satisfaction by 60%."
+    }
   ];
 
+
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                TRUSTED WEB DEVELOPMENT
-                <br />
-                <span className="text-primary">SOLUTIONS FOR LEADING</span>
-                <br />
-                GLOBAL BRANDS
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-lg">
-                Build powerful, scalable web applications that drive business growth and user engagement.
-              </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Start Your Project
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-            <div className="relative">
-              <div className="bg-card rounded-lg p-8 border border-border">
-                <img 
-                  src="/api/placeholder/600/400" 
-                  alt="Web Development Illustration"
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
+      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Image - Replace src with your code image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${development})`,
+          }}
+        />
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Trusted Web Development
+              <br />
+              Solutions For Leading
+              <br />
+              Global 
+                          <span className="bg-gradient-to-r from-yellow-400 via-primary to-yellow-400 bg-clip-text text-transparent ml-1">
+
+              Brands
+            </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl">
+              Master the art of web development with hands-on projects, real-world tools, and
+              expert-led guidance. From front-end design to back-end logic, start creating
+              responsive, high-performance websites today.
+            </p>
+            <div className="flex gap-4">
+              <button className="bg-primary hover:bg-yellow-500 text-black font-semibold px-8 py-4 text-lg rounded-lg transition-colors">
+                Talk to Us
+              </button>
+              <button
+                onClick={handleViewPortfolioClick}
+                className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 text-lg rounded-lg transition-colors"
+              >
+                View Portfolio
+              </button>
             </div>
           </div>
         </div>
+
+        {/* Gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent z-0" />
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              GET A READY-MADE WEB SOLUTION
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Get A Ready-Made Web Solution
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Choose from our comprehensive web development services designed to meet your business needs.
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Transform your business with our comprehensive web development solutions. From custom websites to enterprise applications, we deliver scalable, secure, and user-friendly digital experiences that drive growth and engagement.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="bg-background border-border hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
-                  <service.icon className="w-12 h-12 text-primary mb-6" />
-                  <h3 className="text-xl font-bold text-foreground mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Features List */}
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-2">
+                    Consistent Updates & Support:
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    We ensure your solution stays up-to-date and performs reliably with continuous care and technical assistance.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-2">
+                    Built for Growth & Protection:
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Our solutions are designed to scale effortlessly and include robust, industry-standard security from day one.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-2">
+                    Device-Friendly Experience:
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Your website will adapt flawlessly to all screen sizes, offering a smooth and consistent user experience on any device.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Container */}
+            <div className="relative flex justify-center">
+              <img
+                src={feautures}
+                alt="Web Solution Mockup"
+                className="w-full h-auto max-w-2xl"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black text-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-16">
-            WEB DEVELOPMENT SERVICES WE OFFER
-          </h2>
-          
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Web Development Services We Offer
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Our expert development team specializes in cutting-edge technologies and modern frameworks to create robust, performant web applications. We focus on clean code, optimal user experience, and seamless functionality across all platforms.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+              <div key={index} className="border-2 border-gray-600 rounded-2xl p-8 hover:border-primary transition-colors">
+                <h3 className="text-2xl font-bold text-primary mb-6">{feature.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -161,85 +265,107 @@ const WebDevelopment = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Take advantage of best-in-class development expertise
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our portfolio of successful web development projects that showcase our technical expertise.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <img 
-                src="/api/placeholder/600/400" 
-                alt="Development Process"
-                className="w-full h-auto rounded-lg"
-              />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">
-                OUR WEB DEVELOPMENT PROJECTS
-              </h3>
-              <div className="space-y-6">
-                {projects.map((project, index) => (
-                  <div key={index} className="border-l-4 border-primary pl-6">
-                    <h4 className="text-lg font-semibold text-foreground mb-2">{project.title}</h4>
-                    <p className="text-muted-foreground mb-3">{project.description}</p>
-                    <div className="flex gap-2">
-                      {project.tags.map((tag, idx) => (
-                        <span key={idx} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="w-8 h-8 text-primary" />
-                </div>
-                <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-primary-foreground mb-4">
-            Ready to Start Your Web Development Project?
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-black text-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 max-w-5xl mx-auto leading-tight">
+            Take Advantage Of Best-In-Class Development Expertise
           </h2>
-          <p className="text-lg text-primary-foreground/90 mb-8">
-            Let's build something amazing together. Contact us today for a free consultation.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+            Learn how Intellectsoft will deliver an app that meets your exact business specifications
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90">
-              Get Free Quote
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              View Portfolio
-            </Button>
+          <button className="bg-primary hover:bg-yellow-500 text-black font-semibold px-12 py-4 text-lg rounded-lg transition-colors">
+            Speak to an Exert
+          </button>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-black text-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Header with title and button */}
+          <div className="flex justify-between items-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
+              Our Web Development Projects
+            </h2>
+            <button className="border-2 border-primary text-primary hover:bg-primary hover:text-black font-semibold px-8 py-3 text-lg rounded-lg transition-colors">
+              View All Cases
+            </button>
+          </div>
+
+          {/* Project showcase with navigation arrows */}
+          <div className="relative">
+            {/* Left arrow */}
+            <button
+              onClick={prevProject}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 flex items-center justify-center text-white hover:text-primary transition-colors"
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Right arrow */}
+            <button
+              onClick={nextProject}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 w-12 h-12 flex items-center justify-center text-white hover:text-primary transition-colors"
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Main content grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Image */}
+              <div>
+                <img
+                  src={projectShowcase[currentProjectIndex].image}
+                  alt={`${projectShowcase[currentProjectIndex].title} ${projectShowcase[currentProjectIndex].highlight}`}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+
+              {/* Project details */}
+              <div>
+                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-8">
+                  {projectShowcase[currentProjectIndex].title} <span className="text-primary">{projectShowcase[currentProjectIndex].highlight}</span>
+                </h3>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-xl font-bold text-primary mb-3">Challenge:</h4>
+                    <p className="text-gray-300 leading-relaxed">
+                      {projectShowcase[currentProjectIndex].challenge}
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-bold text-primary mb-3">Solution:</h4>
+                    <p className="text-gray-300 leading-relaxed">
+                      {projectShowcase[currentProjectIndex].solution}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Slide indicators */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {projectShowcase.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentProjectIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${index === currentProjectIndex ? 'bg-primary' : 'bg-gray-600 hover:bg-gray-400'
+                    }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

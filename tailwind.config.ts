@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -84,13 +85,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				marquee: {
+					'0%': {
+						transform: 'translateX(0)'
+					},
+					'100%': {
+						transform: 'translateX(-50%)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'marquee': 'marquee 15s linear infinite'
 			}
-		}
-	},
-	plugins: [require("tailwindcss-animate")],
+		},
+		plugins: [tailwindcssAnimate]
+	}
 } satisfies Config;

@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/homehero.png"
 import nextlane from "@/assets/nextlane.png"
 import sapana from "@/assets/sapana.png"
@@ -26,6 +27,8 @@ import payperclick from "@/assets/PayperClick.png"
 
 
 const Home = () => {
+  const navigate = useNavigate();
+  
   useEffect(() => {
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
     const observer = new window.IntersectionObserver((entries) => {
@@ -39,6 +42,10 @@ const Home = () => {
     revealElements.forEach(el => observer.observe(el));
     return () => observer.disconnect();
   }, []);
+
+  const handleChallengeUsClick = () => {
+    navigate('/contact');
+  };
 
   const logos = [
     "/placeholder.svg",
@@ -54,86 +61,101 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-black text-foreground">
       {/* Header / Hero Section */}
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden">
-        {/* black decorative elements */}
-        {/* <div className="absolute top-0 left-0 w-32 h-32 bg-yellow-500 rounded-full opacity-80"></div> */}
-        <div className="absolute top-16 right-20 w-4 h-4 bg-yellow-400 rounded-full"></div>
-        {/* <div className="absolute top-32 right-4 w-6 h-6 bg-green-400 rounded transform rotate-45"></div> */}
-        <div className="absolute bottom-20 left-8 w-8 h-8 bg-red-500 rounded transform rotate-45"></div>
-        <div className="absolute bottom-32 right-12 w-6 h-6 bg-yellow-400 rounded transform rotate-45"></div>
+<section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden">
+  {/* Decorative elements */}
+  <div className="absolute top-16 right-20 w-4 h-4 bg-yellow-400 rounded-full"></div>
+  <div className="absolute bottom-20 left-8 w-8 h-8 bg-red-500 rounded transform rotate-45"></div>
+  <div className="absolute bottom-32 right-12 w-6 h-6 bg-yellow-400 rounded transform rotate-45"></div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="flex-1 md:pl-16">
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-                Ghanaian Digital<br />Marketing{" "}
-                <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-green-400 bg-clip-text text-transparent">
-                  Agency
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
-                Tailored strategies. Measurable results. Your success, amplified.
-              </p>
-              {/* Wrap the Challenge Us button in a flex container and center it */}
-              <div className="flex justify-start">
-                <Button size="lg" className="px-10 py-5 text-lg font-bold rounded-full shadow-lg bg-primary hover:bg-yellow-500 text-black transition-all duration-200">
-                  Challenge Us
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              {/* Additional black elements around the image */}
-              <div className="absolute -top-8 -left-8 w-20 h-20 bg-yellow-500 rounded-full opacity-60"></div>
-              <div className="absolute top-12 -right-6 flex items-center justify-center">
-
-              </div>
-              {/* <div className="absolute bottom-16 -left-4 w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
-          <div className="w-3 h-3 bg-white rounded-full"></div>
-        </div> */}
-              <div className="absolute top-20 right-8 flex space-x-1">
-                <div className="w-2 h-8 bg-yellow-400 rounded"></div>
-                <div className="w-2 h-6 bg-orange-400 rounded"></div>
-                <div className="w-2 h-4 bg-orange-400 rounded"></div>
-              </div>
-              {/* <div className="absolute bottom-8 right-4 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
-          <div className="w-2 h-2 bg-white rounded-full"></div>
-        </div> */}
-
-              <div className="w-[500px] h-[500px] flex items-center justify-center mx-auto relative">
-                {/* Brown/olive black shape behind the image */}
-                {/* <div className="absolute -z-10 w-96 h-96 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-full transform -rotate-12"></div>
-           */}
-                <img src={heroImage} alt="Professional Digital Marketing Agency" className="object-cover w-full h-full relative z-10 rounded-2xl" />
-              </div>
-            </div>
-          </div>
+  <div className="max-w-7xl mx-auto relative z-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="flex-1 md:pl-16">
+        {/* Updated typography to match development page style */}
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          GHANAIAN DIGITAL
+          <br />
+          <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-green-400 bg-clip-text text-transparent">
+            MARKETING AGENCY
+          </span>
+        </h1>
+        
+        {/* Updated paragraph styling */}
+        <p className="text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
+          Tailored strategies. Measurable results. Your success, amplified through 
+          data-driven digital marketing solutions.
+        </p>
+        
+        {/* Updated button styling to match development page */}
+        <div className="flex gap-4">
+          <button className="bg-primary hover:bg-yellow-500 text-black font-semibold px-8 py-4 text-lg rounded-lg transition-colors">
+            Challenge Us
+          </button>
+          <button className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-4 text-lg rounded-lg transition-colors">
+            View Our Work
+          </button>
         </div>
-      </section>
+      </div>
+      
+      <div className="relative">
+        {/* Decorative elements around the image */}
+        <div className="absolute -top-8 -left-8 w-20 h-20 bg-yellow-500 rounded-full opacity-60"></div>
+        <div className="absolute top-20 right-8 flex space-x-1">
+          <div className="w-2 h-8 bg-yellow-400 rounded"></div>
+          <div className="w-2 h-6 bg-orange-400 rounded"></div>
+          <div className="w-2 h-4 bg-orange-400 rounded"></div>
+        </div>
+
+        <div className="w-[500px] h-[500px] flex items-center justify-center mx-auto relative">
+          <img 
+            src={heroImage} 
+            alt="Professional Digital Marketing Agency" 
+            className="object-cover w-full h-full relative z-10 rounded-2xl" 
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Partners Section */}
       <section className="pt-0 pb-12 px-4 ">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-4xl md:text-5xl font-bold mb-12">Partners</h3>
-          <div className="flex flex-row gap-8 justify-start items-center">
-            {/* Nextlane */}
-            <div className="bg-black rounded w-[210px] flex items-center justify-center">
-              <img src={nextlane} alt="nextlane" className="h-full w-auto object-contain" />
-            </div>
-            {/* Sampana */}
-            <div className="bg-[#232323] rounded w-[210px] flex items-center justify-center">
-              <img src={sapana} alt="Elephant" className="h-full w-auto object-contain" />
-            </div>
-            {/* ToBee */}
-            <div className="bg-[#fff35c] rounded w-[210px] h-[110px] flex items-center justify-center">
-              <img src={tobe} alt="ToBee" className="w-auto object-contain" />
-            </div>
-            {/* SlimFile*/}
-            <div className="bg-transparent rounded w-[210px] h-[110px] flex items-center justify-center">
-              <img src={slimfile} alt="Arrow" className="w-auto object-contain" />
-            </div>
-            {/* LinkedIn */}
-            <div className="bg-[#232323] rounded w-[210px] h-[110px] flex items-center justify-center">
-              <img src={linkedin} alt="LinkedIn" className=" w-auto object-contain" />
+          <div className="overflow-hidden">
+            <div className="flex animate-marquee gap-8 items-center">
+              {/* First set of partners */}
+              <div className="bg-black rounded w-[180px] md:w-[210px] h-[100px] md:h-[110px] flex items-center justify-center flex-shrink-0">
+                <img src={nextlane} alt="nextlane" className="h-full w-auto object-contain" />
+              </div>
+              <div className="bg-[#232323] rounded w-[180px] md:w-[210px] h-[100px] md:h-[110px] flex items-center justify-center flex-shrink-0">
+                <img src={sapana} alt="Elephant" className="h-full w-auto object-contain" />
+              </div>
+              <div className="bg-[#fff35c] rounded w-[180px] md:w-[210px] h-[100px] md:h-[110px] flex items-center justify-center flex-shrink-0">
+                <img src={tobe} alt="ToBee" className="w-auto object-contain" />
+              </div>
+              <div className="bg-transparent rounded w-[180px] md:w-[210px] h-[100px] md:h-[110px] flex items-center justify-center flex-shrink-0">
+                <img src={slimfile} alt="Arrow" className="w-auto object-contain" />
+              </div>
+              <div className="bg-[#232323] rounded w-[180px] md:w-[210px] h-[100px] md:h-[110px] flex items-center justify-center flex-shrink-0">
+                <img src={linkedin} alt="LinkedIn" className=" w-auto object-contain" />
+              </div>
+              
+              {/* Duplicate set for seamless loop */}
+              <div className="bg-black rounded w-[180px] md:w-[210px] h-[100px] md:h-[110px] flex items-center justify-center flex-shrink-0">
+                <img src={nextlane} alt="nextlane" className="h-full w-auto object-contain" />
+              </div>
+              <div className="bg-[#232323] rounded w-[180px] md:w-[210px] h-[100px] md:h-[110px] flex items-center justify-center flex-shrink-0">
+                <img src={sapana} alt="Elephant" className="h-full w-auto object-contain" />
+              </div>
+              <div className="bg-[#fff35c] rounded w-[180px] md:w-[210px] h-[100px] md:h-[110px] flex items-center justify-center flex-shrink-0">
+                <img src={tobe} alt="ToBee" className="w-auto object-contain" />
+              </div>
+              <div className="bg-transparent rounded w-[180px] md:w-[210px] h-[100px] md:h-[110px] flex items-center justify-center flex-shrink-0">
+                <img src={slimfile} alt="Arrow" className="w-auto object-contain" />
+              </div>
+              <div className="bg-[#232323] rounded w-[180px] md:w-[210px] h-[100px] md:h-[110px] flex items-center justify-center flex-shrink-0">
+                <img src={linkedin} alt="LinkedIn" className=" w-auto object-contain" />
+              </div>
             </div>
           </div>
         </div>
