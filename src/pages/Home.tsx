@@ -72,11 +72,15 @@ const Home = () => {
       <div className="flex-1 md:pl-16">
         {/* Updated typography to match development page style */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          GHANAIAN DIGITAL
+          Ghanaian Digiatal
           <br />
-          <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-green-400 bg-clip-text text-transparent">
-            MARKETING AGENCY
+
+            Marketing 
+                                      <span className="bg-gradient-to-r from-yellow-400 via-primary to-yellow-400 bg-clip-text text-transparent ml-1">
+
+            Agency
           </span>
+        
         </h1>
         
         {/* Updated paragraph styling */}
