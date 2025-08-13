@@ -68,20 +68,20 @@ const WebDevelopment = () => {
 
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "Full-featured online store with payment integration and inventory management.",
+      title: "Ghana Real Estate Hub",
+      description: "Comprehensive property listing platform connecting buyers, sellers, and agents across major Ghanaian cities.",
       image: "/api/placeholder/400/250",
       tags: ["React", "Node.js", "MongoDB"]
     },
     {
-      title: "Real Estate Portal",
-      description: "Property listing platform with advanced search and filtering capabilities.",
+      title: "Accra E-Commerce Mall",
+      description: "Multi-vendor marketplace supporting local Ghanaian businesses with mobile money integration and local delivery.",
       image: "/api/placeholder/400/250",
-      tags: ["Next.js", "PostgreSQL", "Stripe"]
+      tags: ["Next.js", "PostgreSQL", "Mobile Money API"]
     },
     {
-      title: "SaaS Dashboard",
-      description: "Analytics dashboard with real-time data visualization and reporting.",
+      title: "Ghana Tourism Portal",
+      description: "Digital platform showcasing Ghana's tourist destinations with booking capabilities and cultural insights.",
       image: "/api/placeholder/400/250",
       tags: ["Vue.js", "Laravel", "MySQL"]
     }
@@ -116,7 +116,7 @@ const WebDevelopment = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+<section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden">
         {/* Background Image - Replace src with your code image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

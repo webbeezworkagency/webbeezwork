@@ -56,7 +56,7 @@ const SEA = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+<section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden">
         {/* Background Image - Replace src with your code image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

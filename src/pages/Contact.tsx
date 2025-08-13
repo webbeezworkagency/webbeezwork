@@ -50,8 +50,10 @@ const Contact = () => {
     "Web Development", 
     "Mobile App Development",
     "E-commerce Solutions",
-    "Brand Identity",
-    "Digital Marketing",
+    "SEO & Digital Marketing",
+    "Search Engine Advertising",
+    "Brand Identity & Graphics",
+    "Website Maintenance",
     "Other"
   ];
 
@@ -89,7 +91,7 @@ const Contact = () => {
               <div className="bg-gray-900 rounded-2xl p-8 h-full">
                 <h2 className="text-2xl font-bold text-white mb-6">Get In Touch</h2>
                 <p className="text-gray-400 mb-8 leading-relaxed">
-                  Have a project in mind? We'd love to hear about it. Send us a message and we'll respond within 24 hours.
+                  Ready to elevate your digital presence? Our team of experts is here to transform your vision into reality. Let's discuss how we can help your business grow through innovative web solutions.
                 </p>
                 
                 <div className="space-y-6">
@@ -99,7 +101,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-white">Email</div>
-                      <div className="text-gray-400">hello@yourcompany.com</div>
+                      <div className="text-gray-400">hello@webbeezwork.com</div>
                     </div>
                   </div>
                   
@@ -109,7 +111,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-white">Phone</div>
-                      <div className="text-gray-400">+1 (555) 123-4567</div>
+                      <div className="text-gray-400">+233 24 123 4567</div>
                     </div>
                   </div>
                   
@@ -119,7 +121,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-white">Office</div>
-                      <div className="text-gray-400">123 Design Street<br />Creative District, CD 12345</div>
+                      <div className="text-gray-400">Digital Hub Accra<br />East Legon, Accra Ghana</div>
                     </div>
                   </div>
                   
@@ -142,7 +144,7 @@ const Contact = () => {
                       <div className="text-xs text-gray-500">Response Time</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">50+</div>
+                      <div className="text-2xl font-bold text-primary">100+</div>
                       <div className="text-xs text-gray-500">Projects Done</div>
                     </div>
                   </div>

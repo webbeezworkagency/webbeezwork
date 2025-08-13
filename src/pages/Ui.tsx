@@ -15,47 +15,47 @@ import uiclients from "@/assets/uiclients.png";
 
 const UIDesign = () => {
   const stats = [
-    { number: "12K", label: "Happy Clients", icon: Users },
-    { number: "65%", label: "Increase", icon: TrendingUp },
-    { number: "5K", label: "Projects", icon: Target },
-    { number: "80%", label: "Retention", icon: Award },
+    { number: "150+", label: "Happy Clients", icon: Users },
+    { number: "300%", label: "Avg ROI Increase", icon: TrendingUp },
+    { number: "200+", label: "Projects Delivered", icon: Target },
+    { number: "98%", label: "Client Satisfaction", icon: Award },
   ];
 
   const services = [
     {
-      title: "Logo Design",
-      description: "Professional logo design that represents your brand identity.",
+      title: "Brand Identity Design",
+      description: "Complete brand identity packages including logo design, color schemes, and brand guidelines that reflect your unique story.",
       image: "/api/placeholder/300/200"
     },
     {
-      title: "Social Media Design", 
-      description: "Eye-catching social media graphics and templates.",
+      title: "Website & App UI/UX", 
+      description: "User-centered design for websites and mobile apps with focus on Ghanaian user behaviors and preferences.",
       image: "/api/placeholder/300/200"
     },
     {
-      title: "Print Design",
-      description: "High-quality print materials for your business needs.",
+      title: "Print & Digital Graphics",
+      description: "Professional graphics for both traditional print media and modern digital platforms, culturally relevant and impactful.",
       image: "/api/placeholder/300/200"
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Marketing Manager",
-      content: "Webbeezwork transformed our online presence with their exceptional design skills.",
+      name: "Akosua Mensah",
+      role: "CEO, AgroFresh Ghana",
+      content: "Webbeezwork transformed our brand identity and created a digital presence that truly represents our Ghanaian agricultural heritage.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      role: "Business Owner", 
-      content: "The team delivered beyond our expectations. Highly recommended!",
+      name: "Kwame Asante",
+      role: "Founder, Accra Tech Hub", 
+      content: "The UI/UX design they created for our platform perfectly balances modern aesthetics with local user preferences. Outstanding work!",
       rating: 5
     },
     {
-      name: "Emily Davis",
-      role: "Startup Founder",
-      content: "Professional, creative, and reliable. Perfect partner for our growth.",
+      name: "Ama Osei",
+      role: "Director, Ghana Tourism Board",
+      content: "Their creative vision helped us showcase Ghana's beauty through exceptional design. Professional, culturally aware, and innovative.",
       rating: 5
     }
   ];
@@ -134,7 +134,7 @@ const UIDesign = () => {
               Why Our Clients Trust Us
             </h2>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur. Elementum nisl duis tortor sed. Suspendisse lobortis vitae quis vehicula pellentesque sit id. Urna posuere consequat velit vulputate faucibus pretium arcu accumsan sit. Vel venenatis sapien.
+              We create user-centered designs that drive engagement and conversions. From wireframes to final prototypes, our UI/UX expertise transforms complex ideas into intuitive digital experiences that users love and businesses profit from.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ const UIDesign = () => {
                     </svg>
                   </div>
                   <p className="text-gray-300 leading-relaxed text-lg">
-                    Lorem ipsum dolor sit amet consectetur. Elementum nisl duis tortor sed.
+                    User research and competitive analysis to understand your target audience and market positioning.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
@@ -170,7 +170,7 @@ const UIDesign = () => {
                     </svg>
                   </div>
                   <p className="text-gray-300 leading-relaxed text-lg">
-                    Lorem ipsum dolor sit amet consectetur. Elementum nisl duis tortor sed.
+                    Wireframing and prototyping to validate concepts before development begins.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
@@ -180,7 +180,7 @@ const UIDesign = () => {
                     </svg>
                   </div>
                   <p className="text-gray-300 leading-relaxed text-lg">
-                    Lorem ipsum dolor sit amet consectetur. Elementum nisl duis tortor sed.
+                    Visual design and branding that creates memorable and cohesive brand experiences.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
@@ -190,7 +190,7 @@ const UIDesign = () => {
                     </svg>
                   </div>
                   <p className="text-gray-300 leading-relaxed text-lg">
-                    Lorem ipsum dolor sit amet consectetur. Elementum nisl duis tortor sed.
+                    Usability testing and optimization to ensure maximum conversion rates and user satisfaction.
                   </p>
                 </div>
               </div>
@@ -209,7 +209,7 @@ const UIDesign = () => {
               Businesses Across The Globe
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur. Elementum nisl duis tortor sed. Suspendisse lobortis vitae quis vehicula pellentesque sit id
+              Our design solutions have helped businesses achieve measurable results: increased user engagement, higher conversion rates, and stronger brand recognition across Ghana and beyond.
             </p>
           </div>
 

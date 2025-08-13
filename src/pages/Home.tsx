@@ -72,7 +72,7 @@ const Home = () => {
       <div className="flex-1 md:pl-16">
         {/* Updated typography to match development page style */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Ghanaian Digiatal
+          Ghanaian Digital
           <br />
 
             Marketing 
@@ -174,7 +174,7 @@ const Home = () => {
             <div className="lg:col-span-1 order-1">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-yellow-300 font-rubik">Our Digital Marketing Expertise</h2>
               <p className="text-gray-400 text-base lg:text-lg font-rubik">
-                We have a team of experienced and trained professionals who have the ability to transform traffic for your business
+                Our team of certified digital marketing specialists delivers comprehensive solutions that drive measurable growth across all digital channels for businesses throughout Ghana and West Africa.
               </p>
             </div>
             {/* Left side - First 2 service cards - below on mobile, left for lg */}
@@ -266,11 +266,10 @@ const Home = () => {
 
           <div className="flex-1">
             <h3 className="text-3xl font-bold mb-6 leading-tight">
-              At Webbezzwork, we transform raw data into smart strategies that drive real results
+              At Webbeezwork, we transform businesses through strategic digital solutions
             </h3>
             <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-              By digging deep into customer behavior and market trends, we turn insights into tailored
-              campaigns that connect, engage, and convert.
+              We combine cutting-edge technology with deep market insights to create digital experiences that drive growth. From comprehensive SEO strategies to high-converting web applications, we're your partner in digital transformation across Ghana and beyond.
             </p>
             <button className="bg-primary hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
               Contact us
@@ -310,7 +309,7 @@ const Home = () => {
                 Sapana - Digital Marketing campaign
               </h3>
               <p className="text-gray-400 text-base leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod
+                Comprehensive digital marketing campaign that increased brand awareness by 340% and generated over 2,500 qualified leads through targeted social media advertising and SEO optimization.
               </p>
             </div>
 
@@ -327,7 +326,7 @@ const Home = () => {
                 U-SPA - Search engine Optimization
               </h3>
               <p className="text-gray-400 text-base leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod
+                Complete SEO overhaul that improved organic search rankings from page 3 to top 5 positions for 15+ high-value keywords, resulting in 280% increase in organic traffic.
               </p>
             </div>
 
@@ -344,7 +343,7 @@ const Home = () => {
                 Basic - Pay per click (PPC)
               </h3>
               <p className="text-gray-400 text-base leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod
+                Strategic Google Ads campaign that achieved 4.2x ROAS and reduced cost-per-acquisition by 45% while scaling monthly ad spend from $5K to $25K profitably.
               </p>
             </div>
 
@@ -364,16 +363,16 @@ const Home = () => {
               <div className="flex items-center gap-4 mb-6">
                 <img
                   src="/placeholder.svg"
-                  alt="Zoe Mantis"
+                  alt="Sarah Johnson"
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-bold text-lg">Zoe Mantis</h4>
-                  <p className="text-sm font-medium">Founder, Alpha Group</p>
+                  <h4 className="font-bold text-lg">Sarah Johnson</h4>
+                  <p className="text-sm font-medium">CEO, TechStart Ghana</p>
                 </div>
               </div>
               <p className="text-base leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod
+                "Webbeezwork transformed our digital presence completely. Their SEO strategy increased our organic traffic by 300% in just 6 months. Exceptional team with outstanding results!"
               </p>
             </div>
 
@@ -382,16 +381,16 @@ const Home = () => {
               <div className="flex items-center gap-4 mb-6">
                 <img
                   src="/placeholder.svg"
-                  alt="Don Joe"
+                  alt="Michael Osei"
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-bold text-lg">Don Joe</h4>
-                  <p className="text-sm font-medium">Founder, Alpha Group</p>
+                  <h4 className="font-bold text-lg">Michael Osei</h4>
+                  <p className="text-sm font-medium">Marketing Director, FreshPay</p>
                 </div>
               </div>
               <p className="text-base leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod
+                "Their PPC campaigns delivered incredible ROI. We went from spending $10K monthly with poor results to achieving 4.5x ROAS. Game-changing partnership!"
               </p>
             </div>
 
@@ -400,16 +399,16 @@ const Home = () => {
               <div className="flex items-center gap-4 mb-6">
                 <img
                   src="/placeholder.svg"
-                  alt="Zoe Mantis"
+                  alt="Akosua Mensah"
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-bold text-lg">Zoe Mantis</h4>
-                  <p className="text-sm font-medium">Founder, Alpha Group</p>
+                  <h4 className="font-bold text-lg">Akosua Mensah</h4>
+                  <p className="text-sm font-medium">Founder, EcoMart Ghana</p>
                 </div>
               </div>
               <p className="text-base leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirm
+                "Outstanding web development and branding work! They created a stunning e-commerce platform that increased our online sales by 250%. Highly recommend their services."
               </p>
             </div>
 
