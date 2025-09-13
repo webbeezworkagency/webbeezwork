@@ -16,16 +16,21 @@ const Footer = () => {
       {/* Left Content */}
       <div className="flex-1 max-w-2xl">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-          Webbeezwork Digital{" "}
+          Webbeezwork{" "}
           <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-green-400 bg-clip-text text-transparent">
-            Agency
+            Digital Marketing Agency
           </span>
         </h1>
         
-        <p className="text-gray-300 text-lg mb-8 leading-relaxed max-w-xl">
-          Partner with Ghana's premier Webbeezwork Digital Marketing Agency. We specialize in 
-          web development, UI/UX design, SEO, and digital advertising to help 
-          businesses thrive in the digital landscape.
+        <p className="text-gray-300 text-lg mb-6 leading-relaxed max-w-xl">
+          Webbeezwork is a digital marketing agency and social enterprise in Takoradi, Ghana. 
+          Our team of experts is dedicated to delivering exceptional results and providing 
+          outstanding customer service throughout Africa.
+        </p>
+        
+        <p className="text-gray-400 text-sm mb-8 leading-relaxed max-w-xl">
+          In partnership with <span className="text-primary font-semibold">Nextlane</span>, 
+          we deliver comprehensive digital solutions combining local expertise with international standards.
         </p>
         
         {/* Contact Section */}
@@ -45,7 +50,7 @@ const Footer = () => {
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
               </div>
-              <span className="font-medium text-lg">+233 24 123 4567</span>
+              <span className="font-medium text-lg">0201965730</span>
             </div>
           </div>
         </div>

@@ -1,8 +1,8 @@
-# Webbeezwork Contact Form System
+# Webbeezwork Digital Marketing Agency Website
 
-## 🚀 Complete Professional Contact Form System
+## 🌟 Ghana's First Social Enterprise in Digital Marketing
 
-This is a full-stack contact form system built for Webbeezwork Webbeezwork Digital Marketing Agency, featuring professional email automation, robust validation, and modern UI/UX.
+This is the official website for Webbeezwork, a digital marketing agency and social enterprise based in Takoradi, Ghana. Born from To Be Worldwide educational facilities, we specialize in delivering digital marketing services throughout Africa.
 
 ## 📋 System Overview
 

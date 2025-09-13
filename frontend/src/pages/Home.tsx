@@ -72,24 +72,27 @@ const Home = () => {
       <div className="flex-1 md:pl-8 lg:pl-16">
         {/* Responsive typography with proper breakpoints */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-          Ghanaian Digital
+          Your full service
           <br />
-          Marketing 
-          <span className="bg-gradient-to-r from-yellow-400 via-primary to-yellow-400 bg-clip-text text-transparent ml-1">
-            Agency
+          <span className="bg-gradient-to-r from-yellow-400 via-primary to-yellow-400 bg-clip-text text-transparent">
+            digital marketing
           </span>
+          <br />
+          agency in Ghana
         </h1>
         
         {/* Responsive paragraph styling */}
         <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl leading-relaxed">
-          Tailored strategies. Measurable results. Your success, amplified through 
-          data-driven digital marketing solutions.
+          Our digital agency in Takoradi, Ghana offers a wide range of digital marketing solutions that help businesses succeed online. We provide website design and development, SEO, social media marketing, PPC advertising and more.
         </p>
         
         {/* Responsive button styling */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <button className="bg-primary hover:bg-yellow-500 text-black font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg transition-colors w-full sm:w-auto">
-            Challenge Us
+          <button 
+            onClick={handleChallengeUsClick}
+            className="bg-primary hover:bg-yellow-500 text-black font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg transition-colors w-full sm:w-auto"
+          >
+            Contact us
           </button>
           <button className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg transition-colors w-full sm:w-auto">
             View Our Work
@@ -122,7 +125,10 @@ const Home = () => {
       {/* Partners Section */}
       <section className="pt-0 pb-8 sm:pb-12 px-4">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12">Partners</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Partners</h3>
+          <p className="text-gray-400 text-base sm:text-lg mb-8 sm:mb-12 max-w-3xl">
+            We collaborate with leading brands and organizations across Africa to deliver exceptional results for our clients.
+          </p>
           <div className="overflow-hidden">
             <div className="flex animate-marquee gap-4 sm:gap-6 lg:gap-8 items-center">
               {/* First set of partners */}
@@ -170,63 +176,63 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-6 lg:mb-8">
             {/* Right side - Title and description - on top for mobile, right for lg */}
             <div className="lg:col-span-1 order-1">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-yellow-300 font-rubik">Our Digital Marketing Expertise</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-yellow-300 font-rubik">Digital Services for your business</h2>
               <p className="text-gray-400 text-sm sm:text-base lg:text-lg font-rubik leading-relaxed">
-                Our team of certified digital marketing specialists delivers comprehensive solutions that drive measurable growth across all digital channels for businesses throughout Ghana and West Africa.
+                Make sure that potential customers can find you online. Our team of experts is dedicated to delivering exceptional results and providing outstanding customer service throughout Africa.
               </p>
             </div>
             {/* Left side - First 2 service cards - below on mobile, left for lg */}
             <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 order-2 lg:order-none">
-              {/* Search Engine Optimization */}
+              {/* SEO */}
               <div className="bg-gray-900 p-4 sm:p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[140px] sm:min-h-[160px]">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4 text-yellow-400 flex-shrink-0">
                   <img src={searchicon} alt="Search" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">Search Engine Optimization</h3>
+                <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">SEO</h3>
               </div>
 
-              {/* Website design & Development */}
+              {/* Web Design and Development */}
               <div className="bg-gray-900 p-4 sm:p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[140px] sm:min-h-[160px]">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4 text-yellow-400 flex-shrink-0">
                   <img src={webIcon} alt="Web" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">Website design & Development</h3>
+                <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">Web Design and Development</h3>
               </div>
             </div>
           </div>
 
           {/* Bottom row - Remaining 4 service cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-            {/* Video editing & Production */}
-            <div className="bg-gray-900 p-4 sm:p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[140px] sm:min-h-[160px]">
-              <div className="w-10 sm:w-12 mb-3 sm:mb-4 text-yellow-400 flex-shrink-0">
-                <img src={videoicon} alt="Video" className="w-full" />
-              </div>
-              <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">Video editing & Production</h3>
-            </div>
-
-            {/* Content Writing */}
+            {/* Content Creation */}
             <div className="bg-gray-900 p-4 sm:p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[140px] sm:min-h-[160px]">
               <div className="w-10 sm:w-12 mb-3 sm:mb-4 text-yellow-400 flex-shrink-0">
                 <img src={contenticon} alt="Content" className="w-full" />
               </div>
-              <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">Content Writing</h3>
+              <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">Content Creation</h3>
             </div>
 
-            {/* Social media Marketing */}
+            {/* Google My Business */}
+            <div className="bg-gray-900 p-4 sm:p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[140px] sm:min-h-[160px]">
+              <div className="w-10 sm:w-12 mb-3 sm:mb-4 text-yellow-400 flex-shrink-0">
+                <img src={searchicon} alt="Google" className="w-full" />
+              </div>
+              <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">Google My Business</h3>
+            </div>
+
+            {/* Social Media Management */}
             <div className="bg-gray-900 p-4 sm:p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[140px] sm:min-h-[160px]">
               <div className="w-10 sm:w-12 mb-3 sm:mb-4 text-yellow-400 flex-shrink-0">
                 <img src={socialicon} alt="Social" className="w-full" />
               </div>
-              <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">Social media Marketing</h3>
+              <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">Social Media Management</h3>
             </div>
 
-            {/* Pay per click (PPC) */}
+            {/* Google Ads Management */}
             <div className="bg-gray-900 p-4 sm:p-6 rounded-lg hover:bg-gray-800 transition-colors h-full flex flex-col min-h-[140px] sm:min-h-[160px]">
               <div className="w-10 sm:w-12 mb-3 sm:mb-4 text-yellow-400 flex-shrink-0">
-                <img src={clickicon} alt="Click" className="w-full" />
+                <img src={clickicon} alt="Ads" className="w-full" />
               </div>
-              <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">Pay per click (PPC)</h3>
+              <h3 className="text-white text-base sm:text-lg font-semibold flex-grow">Google Ads Management</h3>
             </div>
           </div>
         </div>
@@ -262,10 +268,10 @@ const Home = () => {
 
           <div className="flex-1 order-1 md:order-2">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 leading-tight">
-              At Webbeezwork, we transform businesses through strategic digital solutions
+              About Webbeezwork
             </h3>
             <p className="text-muted-foreground mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed">
-              We combine cutting-edge technology with deep market insights to create digital experiences that drive growth. From comprehensive SEO strategies to high-converting web applications, we're your partner in digital transformation across Ghana and beyond.
+              Webbeezwork is an agency based in Ghana that specializes in delivering digital marketing services and was established from the To Be Worldwide educational facilities situated in Takoradi. Webbeezwork boasts a talented and cohesive team, consisting of To Be Worldwide alumni who have grown up together, played together, and worked together.
             </p>
             <button className="bg-primary hover:bg-yellow-500 text-black font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl text-sm sm:text-base w-full sm:w-auto">
               Contact us

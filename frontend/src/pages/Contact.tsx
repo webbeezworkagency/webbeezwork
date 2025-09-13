@@ -28,15 +28,15 @@ const Contact = () => {
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-            Let's{" "}
+            Let us help you establish{" "}
             <span className="bg-gradient-to-r from-primary via-primary to-primary bg-clip-text text-transparent ml-1">
-              Create
+              your online
             </span>
             <br />
-            Something Amazing
+            presence
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your digital presence? We're here to turn your vision into reality.
+            Ghana's first social enterprise in digital marketing. Contact us today to learn more about how we can help take your business to the next level.
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ const Contact = () => {
               <div className="bg-gray-900 rounded-2xl p-8 h-full">
                 <h2 className="text-2xl font-bold text-white mb-6">Get In Touch</h2>
                 <p className="text-gray-400 mb-8 leading-relaxed">
-                  Ready to elevate your digital presence? Our team of experts is here to transform your vision into reality. Let's discuss how we can help your business grow through innovative web solutions.
+                  We are enthusiastic about what we do and committed to helping our clients succeed in the digital landscape. Contact us today to learn more about our services and how we can assist you in achieving your business goals.
                 </p>
                 
                 <div className="space-y-6">
@@ -71,7 +71,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-white">Phone</div>
-                      <div className="text-gray-400">+233 24 123 4567</div>
+                      <div className="text-gray-400">0201965730</div>
                     </div>
                   </div>
                   
@@ -81,7 +81,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-white">Office</div>
-                      <div className="text-gray-400">Digital Hub Accra<br />East Legon, Accra Ghana</div>
+                      <div className="text-gray-400">To Be Worldwide Educational Center<br />Takoradi, Ghana</div>
                     </div>
                   </div>
                   
@@ -92,6 +92,16 @@ const Contact = () => {
                     <div>
                       <div className="font-semibold text-white">Hours</div>
                       <div className="text-gray-400">Mon - Fri: 9AM - 6PM</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <MessageCircle className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">WhatsApp</div>
+                      <div className="text-gray-400">+233557428199</div>
                     </div>
                   </div>
                 </div>
