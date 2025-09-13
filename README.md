@@ -2,7 +2,7 @@
 
 ## 🚀 Complete Professional Contact Form System
 
-This is a full-stack contact form system built for Webbeezwork digital marketing agency, featuring professional email automation, robust validation, and modern UI/UX.
+This is a full-stack contact form system built for Webbeezwork Webbeezwork Digital Marketing Agency, featuring professional email automation, robust validation, and modern UI/UX.
 
 ## 📋 System Overview
 
@@ -45,7 +45,7 @@ EMAIL_PASS=your-app-password
 
 # Company Settings
 COMPANY_EMAIL=webbeezworkagency@gmail.com
-COMPANY_NAME=Webbeezwork Digital Marketing Agency
+COMPANY_NAME=Webbeezwork Webbeezwork Digital Marketing Agency
 
 # Frontend URL
 FRONTEND_URL=http://localhost:5173
@@ -242,4 +242,4 @@ For technical support or questions about this contact form system, please reach 
 
 ---
 
-**Built with ❤️ for Webbeezwork Digital Marketing Agency**
+**Built with ❤️ for Webbeezwork Webbeezwork Digital Marketing Agency**

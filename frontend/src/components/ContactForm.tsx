@@ -51,33 +51,23 @@ const ContactForm: React.FC = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    console.log(`📝 Field changed: ${name} = "${value.substring(0, 50)}${value.length > 50 ? '...' : ''}"`);
     
     setFormData(prev => ({ ...prev, [name]: value }));
     
     // Clear error for this field when user starts typing
     if (errors[name]) {
-      console.log(`🔄 Clearing error for field: ${name}`);
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
   };
 
   const validateFormData = (): boolean => {
-    console.log('🔍 Starting form validation...');
     const validation = validateForm(formData);
     
-    console.log('📝 Validation result:', {
-      isValid: validation.isValid,
-      errors: validation.errors
-    });
-    
     if (!validation.isValid) {
-      console.log('❌ Validation failed with errors:', validation.errors);
       const newErrors: FormErrors = {};
       validation.errors.forEach(error => {
         const [field] = error.split(':');
         newErrors[field.toLowerCase()] = error;
-        console.log(`🔥 Field error - ${field}: ${error}`);
       });
       setErrors(newErrors);
     }
@@ -88,56 +78,21 @@ const ContactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    console.log('\n🚀 ===== FRONTEND FORM SUBMISSION =====');
-    console.log('📋 Form data being submitted:', {
-      name: formData.name,
-      email: formData.email,
-      company: formData.company || 'Not provided',
-      phone: formData.phone || 'Not provided',
-      service: formData.service || 'Not selected',
-      messageLength: formData.message.length,
-      messagePreview: formData.message.substring(0, 100) + (formData.message.length > 100 ? '...' : '')
-    });
-    
     // Reset states
     setErrors({});
     setSubmissionState(prev => ({ ...prev, error: null }));
     
     // Validate form
-    console.log('🔍 Validating form data...');
     if (!validateFormData()) {
-      console.log('❌ Form validation failed');
       return;
     }
-    console.log('✅ Form validation passed');
     
     setSubmissionState(prev => ({ ...prev, isSubmitting: true }));
-    console.log('🔄 Starting API request...');
     
     try {
-      const startTime = Date.now();
-      console.log(`📡 Sending POST request to API...`);
-      
       const response = await contactAPI.submit(formData);
-      const endTime = Date.now();
-      const duration = endTime - startTime;
-      
-      console.log(`⏱️ API request completed in ${duration}ms`);
-      console.log('📥 API Response received:', {
-        success: response.success,
-        message: response.message,
-        data: response.data,
-        error: response.error
-      });
       
       if (response.success) {
-        console.log('🎉 Form submitted successfully!');
-        console.log('📧 Email status:', {
-          userEmailSent: response.data?.userEmailSent,
-          companyNotified: response.data?.companyNotified,
-          submissionId: response.data?.submissionId
-        });
-        
         setSubmissionState({
           isSubmitting: false,
           isSubmitted: true,
@@ -146,7 +101,6 @@ const ContactForm: React.FC = () => {
         });
         
         // Reset form
-        console.log('🔄 Resetting form data...');
         setFormData({
           name: '',
           email: '',
@@ -158,16 +112,11 @@ const ContactForm: React.FC = () => {
         
         // Reset success state after 5 seconds
         setTimeout(() => {
-          console.log('🔄 Resetting success state...');
           setSubmissionState(prev => ({ ...prev, isSubmitted: false, success: false }));
         }, 5000);
       } else {
-        console.log('❌ Form submission failed');
-        console.log('🔥 Error details:', response.error);
-        
         // Handle API validation errors
         if (response.details) {
-          console.log('📝 Validation errors from API:', response.details);
           const newErrors: FormErrors = {};
           response.details.forEach(detail => {
             newErrors[detail.field] = detail.message;
@@ -183,11 +132,6 @@ const ContactForm: React.FC = () => {
         });
       }
     } catch (error) {
-      console.log('💥 Unexpected error during form submission:');
-      console.error('🔥 Error object:', error);
-      console.error('🔥 Error message:', error instanceof Error ? error.message : 'Unknown error');
-      console.error('🔥 Error stack:', error instanceof Error ? error.stack : 'No stack trace');
-      
       setSubmissionState({
         isSubmitting: false,
         isSubmitted: false,
@@ -195,8 +139,6 @@ const ContactForm: React.FC = () => {
         success: false
       });
     }
-    
-    console.log('================================================\n');
   };
 
   const inputClasses = "w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-200";

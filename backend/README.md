@@ -1,6 +1,6 @@
 # Webbeezwork Backend API
 
-Professional backend service for the Webbeezwork digital marketing agency contact form system.
+Professional backend service for the Webbeezwork Webbeezwork Digital Marketing Agency contact form system.
 
 ## Features
 
@@ -36,7 +36,7 @@ EMAIL_PASS=your-app-password
 
 # Company Settings
 COMPANY_EMAIL=webbeezworkagency@gmail.com
-COMPANY_NAME=Webbeezwork Digital Marketing Agency
+COMPANY_NAME=Webbeezwork Webbeezwork Digital Marketing Agency
 
 # Frontend URL
 FRONTEND_URL=http://localhost:5173

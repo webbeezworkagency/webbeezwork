@@ -110,7 +110,7 @@ const Home = () => {
         <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto aspect-square relative">
           <img 
             src={heroImage} 
-            alt="Professional Digital Marketing Agency" 
+            alt="Professional Webbeezwork Digital Marketing Agency" 
             className="object-cover w-full h-full relative z-10 rounded-2xl" 
           />
         </div>

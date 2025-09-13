@@ -52,7 +52,7 @@ EMAIL_SECURE=false
 EMAIL_USER=webbeezworkagency@gmail.com
 EMAIL_PASS=ziax xbow acaj jcaz
 COMPANY_EMAIL=webbeezworkagency@gmail.com
-COMPANY_NAME=Webbeezwork Digital Marketing Agency
+COMPANY_NAME=Webbeezwork Webbeezwork Digital Marketing Agency
 FRONTEND_URL_LOCAL=http://localhost:8080
 FRONTEND_URL_PRODUCTION=https://webbeezwork-pearl.vercel.app
 MAX_REQUESTS_PER_HOUR=10
@@ -64,7 +64,7 @@ Set these environment variables in your Vercel dashboard:
 VITE_API_URL=https://webbeezwork.onrender.com/api
 VITE_APP_NAME=Webbeezwork
 VITE_APP_VERSION=1.0.0
-VITE_COMPANY_NAME=Webbeezwork Digital Marketing Agency
+VITE_COMPANY_NAME=Webbeezwork Webbeezwork Digital Marketing Agency
 VITE_COMPANY_EMAIL=webbeezworkagency@gmail.com
 VITE_COMPANY_PHONE=+233 XX XXX XXXX
 VITE_COMPANY_WEBSITE=https://webbeezwork-pearl.vercel.app

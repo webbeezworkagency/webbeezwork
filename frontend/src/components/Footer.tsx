@@ -23,7 +23,7 @@ const Footer = () => {
         </h1>
         
         <p className="text-gray-300 text-lg mb-8 leading-relaxed max-w-xl">
-          Partner with Ghana's premier digital marketing agency. We specialize in 
+          Partner with Ghana's premier Webbeezwork Digital Marketing Agency. We specialize in 
           web development, UI/UX design, SEO, and digital advertising to help 
           businesses thrive in the digital landscape.
         </p>

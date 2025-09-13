@@ -380,7 +380,7 @@ const generateUserConfirmationTemplate = ({ name, company, service, submissionId
         <div class="content">
           <h2>Hello ${name}! 👋</h2>
           
-          <p>Thank you for contacting <strong>Webbeezwork Digital Marketing Agency</strong>. We're thrilled that you're considering us to help amplify your digital presence and drive meaningful results for your business.</p>
+          <p>Thank you for contacting <strong>Webbeezwork Webbeezwork Digital Marketing Agency</strong>. We're thrilled that you're considering us to help amplify your digital presence and drive meaningful results for your business.</p>
           
           <div class="highlight">
             <h3>📋 Your Inquiry Summary</h3>
@@ -429,7 +429,7 @@ const generateUserConfirmationTemplate = ({ name, company, service, submissionId
         </div>
         
         <div class="company-footer">
-          <p><strong>Webbeezwork Digital Marketing Agency</strong></p>
+          <p><strong>Webbeezwork Webbeezwork Digital Marketing Agency</strong></p>
           <p class="tagline">Tailored Strategies. Measurable Results. Your Success, Amplified.</p>
           <p class="disclaimer">This email was sent because you submitted an inquiry through our website. If you didn't make this request, please disregard this message. We respect your privacy and never share your information with third parties.</p>
         </div>
@@ -444,7 +444,7 @@ const generateUserConfirmationText = ({ name, company, service, submissionId }) 
   return `
 Hi ${name}!
 
-Thank you for reaching out to Webbeezwork Digital Marketing Agency. We've successfully received your message and will respond shortly.
+Thank you for reaching out to Webbeezwork Webbeezwork Digital Marketing Agency. We've successfully received your message and will respond shortly.
 
 Your Submission Details:
 - Service Interest: ${service || 'General inquiry'}
@@ -466,7 +466,7 @@ Website: www.webbeezwork.com
 Connect with us on LinkedIn, Twitter, Facebook, and Instagram.
 
 ---
-Webbeezwork Digital Marketing Agency
+Webbeezwork Webbeezwork Digital Marketing Agency
 Tailored strategies. Measurable results. Your success, amplified.
 
 This email was sent because you submitted a contact form on our website.
