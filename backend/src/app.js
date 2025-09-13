@@ -40,7 +40,10 @@ const corsOptions = {
       'http://127.0.0.1:5173',
       'http://127.0.0.1:8080',
       'http://127.0.0.1:3000',
-      process.env.FRONTEND_URL
+      'https://webbeezwork-pearl.vercel.app',
+      'https://webbeezwork.vercel.app',
+      process.env.FRONTEND_URL_LOCAL,
+      process.env.FRONTEND_URL_PRODUCTION
     ].filter(Boolean); // Remove any undefined values
     
     console.log('🌐 CORS Check - Request Origin:', origin);
