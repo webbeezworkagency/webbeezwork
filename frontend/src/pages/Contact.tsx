@@ -1,62 +1,22 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 import { 
   Mail, 
   Phone, 
   MapPin, 
   Clock, 
-  Send, 
   MessageCircle, 
   Users, 
   Zap,
-  CheckCircle,
-  ArrowRight
+  ArrowRight,
+  Globe,
+  Award,
+  TrendingUp,
+  CheckCircle
 } from "lucide-react";
 
 const Contact = () => {
-  const [form, setForm] = useState({ 
-    name: "", 
-    email: "", 
-    company: "",
-    phone: "",
-    service: "",
-    message: "" 
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setForm({ name: "", email: "", company: "", phone: "", service: "", message: "" });
-      
-      // Reset success state after 3 seconds
-      setTimeout(() => setIsSubmitted(false), 3000);
-    }, 1500);
-  };
-
-  const services = [
-    "UI/UX Design",
-    "Web Development", 
-    "Mobile App Development",
-    "E-commerce Solutions",
-    "SEO & Digital Marketing",
-    "Search Engine Advertising",
-    "Brand Identity & Graphics",
-    "Website Maintenance",
-    "Other"
-  ];
-
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -69,7 +29,7 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
             Let's{" "}
-                          <span className="bg-gradient-to-r from-primary via-primary to-primary bg-clip-text text-transparent ml-1">
+            <span className="bg-gradient-to-r from-primary via-primary to-primary bg-clip-text text-transparent ml-1">
               Create
             </span>
             <br />
@@ -101,7 +61,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-white">Email</div>
-                      <div className="text-gray-400">hello@webbeezwork.com</div>
+                      <div className="text-gray-400">webbeezworkagency@gmail.com</div>
                     </div>
                   </div>
                   
@@ -154,140 +114,11 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-gray-900 rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-8">
-                  <MessageCircle className="w-8 h-8 text-primary" />
-                  <h2 className="text-2xl font-bold text-white">Start Your Project</h2>
-                </div>
-
-                {isSubmitted ? (
-                  <div className="text-center py-12">
-                    <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-6" />
-                    <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-                    <p className="text-gray-400">We'll get back to you within 24 hours.</p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-2" htmlFor="name">
-                          Full Name *
-                        </label>
-                        <input 
-                          id="name" 
-                          name="name" 
-                          type="text" 
-                          value={form.name} 
-                          onChange={handleChange} 
-                          required 
-                          className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-200"
-                          placeholder="John Doe"
-                        />
-                      </div>
-                      
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-2" htmlFor="email">
-                          Email Address *
-                        </label>
-                        <input 
-                          id="email" 
-                          name="email" 
-                          type="email" 
-                          value={form.email} 
-                          onChange={handleChange} 
-                          required 
-                          className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-200"
-                          placeholder="john@company.com"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-2" htmlFor="company">
-                          Company
-                        </label>
-                        <input 
-                          id="company" 
-                          name="company" 
-                          type="text" 
-                          value={form.company} 
-                          onChange={handleChange} 
-                          className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-200"
-                          placeholder="Your Company"
-                        />
-                      </div>
-                      
-                      <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-2" htmlFor="phone">
-                          Phone Number
-                        </label>
-                        <input 
-                          id="phone" 
-                          name="phone" 
-                          type="tel" 
-                          value={form.phone} 
-                          onChange={handleChange} 
-                          className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-200"
-                          placeholder="+1 (555) 123-4567"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-2" htmlFor="service">
-                        Service Needed
-                      </label>
-                      <select 
-                        id="service" 
-                        name="service" 
-                        value={form.service} 
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-200"
-                      >
-                        <option value="">Select a service</option>
-                        {services.map((service) => (
-                          <option key={service} value={service}>{service}</option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-2" htmlFor="message">
-                        Project Details *
-                      </label>
-                      <textarea 
-                        id="message" 
-                        name="message" 
-                        value={form.message} 
-                        onChange={handleChange} 
-                        required 
-                        rows={6}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-200 resize-none"
-                        placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
-                      />
-                    </div>
-
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting}
-                      className="w-full bg-primary hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
-                    >
-                      {isSubmitting ? (
-                        <div className="flex items-center justify-center gap-2">
-                          <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin"></div>
-                          Sending...
-                        </div>
-                      ) : (
-                        <div className="flex items-center justify-center gap-2">
-                          <Send className="w-5 h-5" />
-                          Send Message
-                        </div>
-                      )}
-                    </Button>
-                  </form>
-                )}
+              <div className="flex items-center gap-3 mb-8">
+                <MessageCircle className="w-8 h-8 text-primary" />
+                <h2 className="text-2xl font-bold text-white">Start Your Project</h2>
               </div>
+              <ContactForm />
             </div>
           </div>
         </div>
