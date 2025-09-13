@@ -86,7 +86,10 @@ app.use((req, res, next) => {
     'http://127.0.0.1:5173',
     'http://127.0.0.1:8080',
     'http://127.0.0.1:3000',
-    process.env.FRONTEND_URL
+    'https://webbeezwork-pearl.vercel.app',
+    'https://webbeezwork.vercel.app',
+    process.env.FRONTEND_URL_LOCAL,
+    process.env.FRONTEND_URL_PRODUCTION
   ].filter(Boolean);
 
   console.log('🔧 Manual CORS Middleware - Origin:', origin);
@@ -156,6 +159,39 @@ app.get('/health', (req, res) => {
   });
 });
 
+// Root route - API info
+app.get('/', (req, res) => {
+  console.log('🏠 Root route accessed');
+  res.json({
+    name: 'Webbeezwork Backend API',
+    version: '1.0.0',
+    status: 'running',
+    timestamp: new Date().toISOString(),
+    endpoints: {
+      health: '/health',
+      contact: '/api/contact/submit'
+    },
+    documentation: 'Visit /health for server health status'
+  });
+});
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  console.log('🏥 Health check accessed');
+  res.json({
+    status: 'healthy',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    environment: process.env.NODE_ENV || 'development',
+    version: '1.0.0',
+    services: {
+      email: process.env.EMAIL_USER ? 'configured' : 'not configured',
+      cors: 'enabled',
+      rateLimit: 'enabled'
+    }
+  });
+});
+
 // API routes
 app.use('/api/contact', contactRoutes);
 
@@ -184,11 +220,13 @@ app.use((err, req, res, next) => {
 
 app.listen(PORT, () => {
   console.log('\n🚀 ===== SERVER STARTUP =====');
-  console.log(`� Webbeezwork Backend running on port ${PORT}`);
+  console.log(`🚀 Webbeezwork Backend running on port ${PORT}`);
   console.log(`🌐 Environment: ${process.env.NODE_ENV}`);
   console.log(`🔗 Health check: http://localhost:${PORT}/health`);
   console.log(`📧 Email service configured for ${process.env.EMAIL_USER}`);
-  console.log(`� CORS enabled for: ${process.env.FRONTEND_URL}`);
+  console.log(`🔗 CORS enabled for multiple origins:`);
+  console.log(`   📱 Local: ${process.env.FRONTEND_URL_LOCAL}`);
+  console.log(`   🌍 Production: ${process.env.FRONTEND_URL_PRODUCTION}`);
   console.log(`🛡️ Rate limiting: ${process.env.MAX_REQUESTS_PER_HOUR || 10} requests/hour`);
   console.log('===============================\n');
 });
