@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 
+// Email service for Webbeezwork contact form - Updated 2025-09-13
 // Create email transporter
 const createTransporter = () => {
   const config = {
