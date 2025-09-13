@@ -1,0 +1,15 @@
+name: Keep Backend Awake
+
+on:
+  schedule:
+    - cron: "*/1 * * * *"   # every 1 minute
+  workflow_dispatch:        # allows manual run
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping backend endpoint
+        run: |
+          echo "Pinging backend at $(date)"
+          curl -s -o /dev/null -w "%{http_code}\n" https://webbeezwork.onrender.com/health || true
