@@ -21,6 +21,8 @@ import whychoose from "@/assets/whychoose.png"
 import growth from "@/assets/growth.svg"
 import uspa from "@/assets/U-SPA.png"
 import payperclick from "@/assets/PayperClick.png"
+import { caseStudies } from "@/data/caseStudies";
+import CaseStudyCard from "@/components/CaseStudyCard";
 
 
 
@@ -292,128 +294,63 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Latest Work Section */}
+      {/* Latest Work Section (commented out in favor of Case Studies) */}
+      {/**
+       * <section className="py-12 sm:py-16 px-4 bg-black text-white reveal-on-scroll">
+       *   <div className="max-w-6xl mx-auto">
+       *     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12">Our latest work</h2>
+       *     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+       *
+       *       <div className="group cursor-pointer">
+       *         <div className="mb-4 sm:mb-6 overflow-hidden rounded-2xl">
+       *           <img src={sapana} alt="Sapana Digital Marketing Campaign" className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105" />
+       *         </div>
+       *         <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 leading-tight">Sapana - Digital Marketing campaign</h3>
+       *         <p className="text-gray-400 text-sm sm:text-base leading-relaxed">Comprehensive digital marketing campaign that increased brand awareness by 340% and generated over 2,500 qualified leads through targeted social media advertising and SEO optimization.</p>
+       *       </div>
+       *
+       *       <div className="group cursor-pointer">
+       *         <div className="mb-4 sm:mb-6 overflow-hidden rounded-2xl">
+       *           <img src={uspa} alt="U-SPA Search Engine Optimization" className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105" />
+       *         </div>
+       *         <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 leading-tight">U-SPA - Search engine Optimization</h3>
+       *         <p className="text-gray-400 text-sm sm:text-base leading-relaxed">Complete SEO overhaul that improved organic search rankings from page 3 to top 5 positions for 15+ high-value keywords, resulting in 280% increase in organic traffic.</p>
+       *       </div>
+       *
+       *       <div className="group cursor-pointer">
+       *         <div className="mb-4 sm:mb-6 overflow-hidden rounded-2xl">
+       *           <img src={payperclick} alt="Basic Pay per click PPC" className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105" />
+       *         </div>
+       *         <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 leading-tight">Basic - Pay per click (PPC)</h3>
+       *         <p className="text-gray-400 text-sm sm:text-base leading-relaxed">Strategic Google Ads campaign that achieved 4.2x ROAS and reduced cost-per-acquisition by 45% while scaling monthly ad spend from $5K to $25K profitably.</p>
+       *       </div>
+       *
+       *     </div>
+       *   </div>
+       * </section>
+       */}
+
+      {/* Case Studies (replaces Testimonials) */}
       <section className="py-12 sm:py-16 px-4 bg-black text-white reveal-on-scroll">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12">Our latest work</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
-            {/* Sapana - Digital Marketing Campaign */}
-            <div className="group cursor-pointer">
-              <div className="mb-4 sm:mb-6 overflow-hidden rounded-2xl">
-                <img
-                  src={sapana}
-                  alt="Sapana Digital Marketing Campaign"
-                  className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 leading-tight">
-                Sapana - Digital Marketing campaign
-              </h3>
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                Comprehensive digital marketing campaign that increased brand awareness by 340% and generated over 2,500 qualified leads through targeted social media advertising and SEO optimization.
-              </p>
-            </div>
-
-            {/* U-SPA - Search engine Optimization */}
-            <div className="group cursor-pointer">
-              <div className="mb-4 sm:mb-6 overflow-hidden rounded-2xl">
-                <img
-                  src={uspa}
-                  alt="U-SPA Search Engine Optimization"
-                  className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 leading-tight">
-                U-SPA - Search engine Optimization
-              </h3>
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                Complete SEO overhaul that improved organic search rankings from page 3 to top 5 positions for 15+ high-value keywords, resulting in 280% increase in organic traffic.
-              </p>
-            </div>
-
-            {/* Basic - Pay per click (PPC) */}
-            <div className="group cursor-pointer">
-              <div className="mb-4 sm:mb-6 overflow-hidden rounded-2xl">
-                <img
-                  src={payperclick}
-                  alt="Basic Pay per click PPC"
-                  className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 leading-tight">
-                Basic - Pay per click (PPC)
-              </h3>
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                Strategic Google Ads campaign that achieved 4.2x ROAS and reduced cost-per-acquisition by 45% while scaling monthly ad spend from $5K to $25K profitably.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-12 sm:py-16 px-4 bg-black text-white reveal-on-scroll">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12">Testimonials</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12">Case Studies</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-
-            {/* Testimonial 1 - Sarah Johnson */}
-            <div className="bg-primary text-black p-6 sm:p-8 rounded-2xl">
-              <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                <img
-                  src="/placeholder.svg"
-                  alt="Sarah Johnson"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
+            {caseStudies
+              .filter((c) => c.featured)
+              .slice(0, 3)
+              .map((c) => (
+                <CaseStudyCard
+                  key={c.id}
+                  title={c.title}
+                  category={c.category}
+                  description={c.description}
+                  image={c.image}
+                  href={c.link}
+                  dense
+                  imageHeightClassName="h-40 sm:h-44 md:h-48"
                 />
-                <div>
-                  <h4 className="font-bold text-base sm:text-lg">Sarah Johnson</h4>
-                  <p className="text-xs sm:text-sm font-medium">CEO, TechStart Ghana</p>
-                </div>
-              </div>
-              <p className="text-sm sm:text-base leading-relaxed">
-                "Webbeezwork transformed our digital presence completely. Their SEO strategy increased our organic traffic by 300% in just 6 months. Exceptional team with outstanding results!"
-              </p>
-            </div>
-
-            {/* Testimonial 2 - Michael Osei */}
-            <div className="bg-primary text-black p-6 sm:p-8 rounded-2xl">
-              <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                <img
-                  src="/placeholder.svg"
-                  alt="Michael Osei"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
-                />
-                <div>
-                  <h4 className="font-bold text-base sm:text-lg">Michael Osei</h4>
-                  <p className="text-xs sm:text-sm font-medium">Marketing Director, FreshPay</p>
-                </div>
-              </div>
-              <p className="text-sm sm:text-base leading-relaxed">
-                "Their PPC campaigns delivered incredible ROI. We went from spending $10K monthly with poor results to achieving 4.5x ROAS. Game-changing partnership!"
-              </p>
-            </div>
-
-            {/* Testimonial 3 - Akosua Mensah */}
-            <div className="bg-primary text-black p-6 sm:p-8 rounded-2xl">
-              <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                <img
-                  src="/placeholder.svg"
-                  alt="Akosua Mensah"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
-                />
-                <div>
-                  <h4 className="font-bold text-base sm:text-lg">Akosua Mensah</h4>
-                  <p className="text-xs sm:text-sm font-medium">Founder, EcoMart Ghana</p>
-                </div>
-              </div>
-              <p className="text-sm sm:text-base leading-relaxed">
-                "Outstanding web development and branding work! They created a stunning e-commerce platform that increased our online sales by 250%. Highly recommend their services."
-              </p>
-            </div>
-
+              ))}
           </div>
         </div>
       </section>

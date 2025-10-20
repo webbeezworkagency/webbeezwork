@@ -1,20 +1,31 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
   const navRef = useRef<HTMLElement>(null); // Changed to HTMLElement
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "UI/UX Design", path: "/ui-ux-design" },
-    { name: "Web Development", path: "/web-development" },
-    { name: "SEO", path: "/seo" },
-    { name: "SEA", path: "/sea" },
+    { name: "About", path: "/about" },
     { name: "Portfolio", path: "/portfolio" },
+  ];
+
+  const serviceItems = [
+    { name: "Web Development", path: "/web-development" },
+    { name: "UI/UX Design", path: "/ui-ux-design" },
+    { name: "SEO", path: "/seo" },
+    { name: "Google Ads Management", path: "/google-ads-management" },
+    { name: "Social Media Management", path: "/social-media-management" },
+    { name: "Google My Business", path: "/google-my-business" },
+    { name: "Content Creation", path: "/content-creation" },
+    { name: "Online Visibility Check", path: "/online-visibility-check" },
+    { name: "Training Session", path: "/training-session" },
+    { name: "Partnerships", path: "/partnerships" },
   ];
 
   useEffect(() => {
@@ -23,6 +34,7 @@ const Navigation = () => {
     function handleClickOutside(event: MouseEvent) {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setIsOpen(false);
+        setServicesOpen(false);
       }
     }
     
@@ -61,13 +73,50 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                className="flex items-center text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                Services
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              
+              {servicesOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-1 w-64 bg-background border border-border rounded-md shadow-lg z-50"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  <div className="py-2">
+                    {serviceItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.path}
+                        className={`block px-4 py-2 text-sm transition-colors hover:bg-gray-100 hover:text-gray-800 ${
+                          location.pathname === item.path
+                            ? "text-primary bg-gray-50"
+                            : "text-muted-foreground"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            
             <Link to="/contact">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm">
                 Get Started
               </Button>
             </Link>
             <a
-              href="https://wa.me/233501234567"
+              href="https://wa.me/233557428199"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-2"
@@ -81,7 +130,7 @@ const Navigation = () => {
           {/* Mobile Toggle and WhatsApp Button */}
           <div className="md:hidden flex items-center space-x-3">
             <a
-              href="https://wa.me/233501234567"
+              href="https://wa.me/233557428199"
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()} // Added stopPropagation
@@ -98,6 +147,7 @@ const Navigation = () => {
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsOpen(false);
+                  setServicesOpen(false);
                 }}
               >
                 <X className="h-6 w-6" />
@@ -119,7 +169,7 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation - Removed ref from here */}
+      {/* Mobile Navigation */}
       <div
         className={`md:hidden transition-all duration-300 ease-in-out ${
           isOpen
@@ -142,6 +192,39 @@ const Navigation = () => {
               {item.name}
             </Link>
           ))}
+          
+          {/* Mobile Services */}
+          <div>
+            <button
+              className="flex items-center justify-between w-full text-base font-medium transition-colors px-3 py-2 rounded hover:text-primary text-muted-foreground"
+              onClick={() => setServicesOpen(!servicesOpen)}
+            >
+              Services
+              <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {servicesOpen && (
+              <div className="pl-6 space-y-1">
+                {serviceItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setServicesOpen(false);
+                    }}
+                    className={`block text-sm transition-colors px-3 py-2 rounded hover:text-primary ${
+                      location.pathname === item.path
+                        ? "text-primary"
+                        : "text-muted-foreground"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          
           <div className="pt-2 flex flex-col gap-2">
             <Link to="/contact" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">

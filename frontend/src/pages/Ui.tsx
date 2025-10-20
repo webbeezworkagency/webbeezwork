@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Users, TrendingUp, Target, Award, Star, Play } from "lucide-react";
+import CaseStudyCard from "@/components/CaseStudyCard";
+import { caseStudies } from "@/data/caseStudies";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { useEffect } from "react";
@@ -277,63 +279,40 @@ const UIDesign = () => {
         </div>
       </section>
 
-      {/* Our latest work */}
+      {/* Our latest work (commented out) */}
+      {/**
+       * <section className="py-16 px-4 bg-black text-white reveal-on-scroll">
+       *   <div className="max-w-6xl mx-auto">
+       *     <div className="text-center mb-16">
+       *       <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">Our Latest Work</h2>
+       *     </div>
+       *     <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> ... </div>
+       *   </div>
+       * </section>
+       */}
+
+      {/* Case Studies (same style as Home) */}
       <section className="py-16 px-4 bg-black text-white reveal-on-scroll">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">Our Latest Work</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">Case Studies</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Sapana - Campaign */}
-            <div className="group cursor-pointer">
-              <div className="mb-6 overflow-hidden rounded-2xl">
-                <img
-                  src={sapana}
-                  alt="Sapana Campaign Design"
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {caseStudies
+              .filter((c) => c.featured)
+              .slice(0, 3)
+              .map((c) => (
+                <CaseStudyCard
+                  key={c.id}
+                  title={c.title}
+                  category={c.category}
+                  description={c.description}
+                  image={c.image}
+                  href={c.link}
+                  dense
+                  imageHeightClassName="h-40 sm:h-44 md:h-48"
                 />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight text-white">
-                Sapana — Campaign Identity & Creative
-              </h3>
-              <p className="text-gray-300 text-base leading-relaxed">
-                Developed a cohesive visual system and high-performing ad creatives that boosted engagement across channels.
-              </p>
-            </div>
-
-            {/* U-SPA - UX/SEO Redesign */}
-            <div className="group cursor-pointer">
-              <div className="mb-6 overflow-hidden rounded-2xl">
-                <img
-                  src={uspa}
-                  alt="U-SPA Website Redesign"
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight text-white">
-                U-SPA — Website UX & Conversion Lift
-              </h3>
-              <p className="text-gray-300 text-base leading-relaxed">
-                Redesigned core pages, streamlined flows, and improved content hierarchy to increase conversions and organic reach.
-              </p>
-            </div>
-
-            {/* PPC - Landing Pages */}
-            <div className="group cursor-pointer">
-              <div className="mb-6 overflow-hidden rounded-2xl">
-                <img
-                  src={payperclick}
-                  alt="PPC Landing Page Design"
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight text-white">
-                PPC — Creative Kit & Landing Pages
-              </h3>
-              <p className="text-gray-300 text-base leading-relaxed">
-                Launched modular landing pages and on-brand ad assets optimized for speed, clarity, and conversion.
-              </p>
-            </div>
+              ))}
           </div>
         </div>
       </section>

@@ -2,80 +2,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { ExternalLink, Calendar, Users, Award } from "lucide-react";
+import { caseStudies, getCategories } from "@/data/caseStudies";
+import CaseStudyCard from "@/components/CaseStudyCard";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const projects = [
-    {
-      id: 1,
-      title: "AgroTech Ghana Platform",
-      category: "Web App",
-      description: "A comprehensive agricultural management platform connecting farmers with modern technology and market insights across Ghana.",
-      image: "/placeholder.svg",
-      tags: ["React", "TypeScript", "Node.js"],
-      client: "AgriTech Ghana",
-      year: "2024",
-      link: "#"
-    },
-    {
-      id: 2,
-      title: "Mobile Money Dashboard",
-      category: "Mobile App",
-      description: "Financial management app for mobile money transactions with real-time analytics and budget tracking for Ghanaian users.",
-      image: "/placeholder.svg",
-      tags: ["React Native", "API Integration", "Firebase"],
-      client: "FinTech Accra",
-      year: "2024",
-      link: "#"
-    },
-    {
-      id: 3,
-      title: "GhanaMed Telehealth",
-      category: "Web App",
-      description: "Telemedicine platform connecting patients across Ghana with certified healthcare providers through secure consultations.",
-      image: "/placeholder.svg",
-      tags: ["Vue.js", "WebRTC", "Healthcare API"],
-      client: "Ghana Health Service",
-      year: "2023",
-      link: "#"
-    },
-    {
-      id: 4,
-      title: "Kente Cultural Gallery",
-      category: "Website",
-      description: "Digital showcase of Ghanaian cultural heritage featuring traditional Kente patterns and artisan stories.",
-      image: "/placeholder.svg",
-      tags: ["Next.js", "Sanity CMS", "Tailwind"],
-      client: "Cultural Heritage Foundation",
-      year: "2024",
-      link: "#"
-    },
-    {
-      id: 5,
-      title: "GhanaExport Logistics",
-      category: "Web App",
-      description: "Supply chain management system for cocoa and gold exports with real-time tracking and compliance monitoring.",
-      image: "/placeholder.svg",
-      tags: ["React", "Express", "MongoDB"],
-      client: "Export Development Board",
-      year: "2023",
-      link: "#"
-    },
-    {
-      id: 6,
-      title: "EduGhana Learning Hub",
-      category: "Website",
-      description: "Interactive e-learning platform supporting Ghanaian students with local language support and WAEC curriculum alignment.",
-      image: "/placeholder.svg",
-      tags: ["React", "Strapi", "AWS"],
-      client: "Ministry of Education",
-      year: "2024",
-      link: "#"
-    }
-  ];
+  const projects = caseStudies;
 
-  const categories = ["All", "Web App", "Mobile App", "Website"];
+  const categories = getCategories();
   
   const filteredProjects = activeFilter === "All" 
     ? projects 
@@ -148,59 +83,19 @@ const Portfolio = () => {
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => (
-              <Card key={project.id} className="bg-gray-900 border-gray-800 hover:border-primary/50 transition-all duration-300 group cursor-pointer overflow-hidden">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <ExternalLink className="w-5 h-5 text-primary" />
-                  </div>
-                </div>
-                
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
-                      {project.category}
-                    </span>
-                    <span className="text-xs text-gray-500">{project.year}</span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  <div className="flex items-center gap-4 mb-4 text-xs text-gray-500">
-                    <div className="flex items-center gap-1">
-                      <Users className="w-3 h-3" />
-                      {project.client}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      {project.year}
-                    </div>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span 
-                        key={tagIndex}
-                        className="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded border border-gray-700"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+            {filteredProjects.map((p) => (
+              <CaseStudyCard
+                key={p.id}
+                title={p.title}
+                category={p.category}
+                description={p.description}
+                image={p.image}
+                client={p.client}
+                year={p.year}
+                tags={p.tags}
+                href={p.link}
+                imageHeightClassName="h-48"
+              />
             ))}
           </div>
         </div>
