@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  /* Light Theme (Default) */
+  --background: #ffffff;
+  --foreground: #09090b;
+  /* Zinc-950 for high contrast text */
+  --brand-yellow: #FACC15;
+  /* Bright yellow to match logo */
+  --brand-black: #050505;
+  --brand-gray: #f4f4f5;
+  /* Zinc-100 */
+  --brand-gray-light: #e4e4e7;
+  /* Zinc-200 */
+}
+
+.dark {
+  /* Dark Theme */
+  --background: #050505;
+  --foreground: #ededed;
+  --brand-yellow: #FACC15;
+  --brand-black: #050505;
+  --brand-gray: #121212;
+  --brand-gray-light: #1E1E1E;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-black: var(--brand-black);
+  --color-brand-gray: var(--brand-gray);
+  --color-brand-gray-light: var(--brand-gray-light);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
