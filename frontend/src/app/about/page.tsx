@@ -25,8 +25,8 @@ export default function AboutPage() {
 
 			<AboutHero />
 
-			{/* Draggable Process Section */}
-			<section className="py-0 bg-background border-t border-foreground/10 overflow-hidden">
+			{/* Draggable Process Section - Hidden on mobile */}
+			<section className="hidden md:block py-0 bg-background border-t border-foreground/10 overflow-hidden">
 				<DraggableCardDemo images={images} />
 			</section>
 
