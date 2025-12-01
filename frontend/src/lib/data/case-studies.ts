@@ -10,7 +10,8 @@ export const caseStudies = [
 		],
 		image: "/images/sapana_lodge.png",
 		result: "1.42K Clicks", // For CaseStudyPreview
-		service: "Google Ads (SEA)" // For CaseStudyPreview
+		service: "Google Ads (SEA)", // For CaseStudyPreview
+		link: "https://www.sapanalodge.com/"
 	},
 	{
 		id: 2,
@@ -23,7 +24,8 @@ export const caseStudies = [
 		],
 		image: "/images/case_study_1.png",
 		result: "360° Growth",
-		service: "SEO & Social"
+		service: "SEO & Social",
+		link: "https://npselectiongh.com/blog"
 	},
 	{
 		id: 3,
@@ -36,7 +38,8 @@ export const caseStudies = [
 		],
 		image: "/images/case_study_2.png",
 		result: "Sales Boost",
-		service: "Web Design"
+		service: "Web Design",
+		link: "http://maxreezarts.mystrikingly.com/"
 	},
 	{
 		id: 4,
@@ -49,6 +52,7 @@ export const caseStudies = [
 		],
 		image: "/images/case_study_3.png",
 		result: "Traffic Boost",
-		service: "SEO & Marketing"
+		service: "SEO & Marketing",
+		link: "http://godisgreatproductions.mystrikingly.com/"
 	},
 ];

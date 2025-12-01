@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export function TeamPreview() {
 	return (
@@ -34,21 +35,34 @@ export function TeamPreview() {
 						viewport={{ once: true }}
 						className="w-full lg:w-1/2 grid grid-cols-2 gap-4"
 					>
-						{/* Abstract representation of team grid since we don't have individual images yet */}
-						<motion.div
+							<motion.div
 							initial={{ opacity: 0, scale: 0.8, y: 50 }}
 							whileInView={{ opacity: 1, scale: 1, y: 0 }}
 							viewport={{ once: true, amount: 0.5 }}
 							transition={{ type: "spring", stiffness: 100, damping: 20 }}
-							className="h-64 rounded-2xl bg-brand-gray border border-foreground/5 hover:border-brand-yellow/50 transition-colors"
-						/>
+							className="h-64 rounded-2xl overflow-hidden border border-foreground/5 hover:border-brand-yellow/50 transition-colors relative"
+						>
+							<Image
+								src="/images/Abekah.jpg"
+								alt="Isaac Abekah - Team Member"
+								fill
+								className="object-cover"
+							/>
+						</motion.div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.8, y: 50 }}
 							whileInView={{ opacity: 1, scale: 1, y: 0 }}
 							viewport={{ once: true, amount: 0.5 }}
 							transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
-							className="h-64 rounded-2xl bg-brand-gray-light border border-foreground/5 hover:border-brand-yellow/50 transition-colors mt-12"
-						/>
+							className="h-64 rounded-2xl overflow-hidden border border-foreground/5 hover:border-brand-yellow/50 transition-colors mt-12 relative"
+						>
+							<Image
+								src="/images/Munira.jpg"
+								alt="Munira - Team Member"
+								fill
+								className="object-cover"
+							/>
+						</motion.div>
 					</motion.div>
 				</div>
 			</div>

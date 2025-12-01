@@ -59,10 +59,15 @@ export default function CaseStudiesPage() {
 									))}
 								</div>
 
-								<button className="flex items-center gap-2 text-foreground font-bold hover:text-brand-yellow transition-colors group/btn">
-									View Case Study
+								<a
+									href={study.link || "#"}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex items-center gap-2 text-foreground font-bold hover:text-brand-yellow transition-colors group/btn"
+								>
+									Visit Website
 									<ArrowUpRight className="w-5 h-5 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-								</button>
+								</a>
 							</div>
 
 							<div className="order-1 lg:order-2 relative h-[400px] rounded-3xl overflow-hidden bg-brand-gray border border-foreground/10">

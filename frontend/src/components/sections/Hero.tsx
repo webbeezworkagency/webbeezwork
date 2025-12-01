@@ -72,9 +72,11 @@ export function Hero() {
 						</button>
 					</Link>
 
-					<button className="w-full sm:w-auto px-8 py-4 bg-transparent border border-foreground/20 text-foreground font-bold rounded-full hover:bg-foreground/5 transition-all flex items-center justify-center gap-2">
-						View Case Studies
-					</button>
+					<Link href="/case-studies">
+						<button className="w-full sm:w-auto px-8 py-4 bg-transparent border border-foreground/20 text-foreground font-bold rounded-full hover:bg-foreground/5 transition-all flex items-center justify-center gap-2">
+							View Case Studies
+						</button>
+					</Link>
 				</motion.div>
 
 			</div>

@@ -52,7 +52,11 @@ export function CaseStudyPreview() {
 							}}
 							className="group relative block"
 						>
-							<Link href="/case-studies">
+							<Link
+								href={item.link || "/case-studies"}
+								target={item.link ? "_blank" : undefined}
+								rel={item.link ? "noopener noreferrer" : undefined}
+							>
 								<div className="relative h-[400px] rounded-2xl overflow-hidden mb-6 bg-brand-gray group-hover:scale-[1.02] transition-transform duration-500">
 									<Image
 										src={item.image}

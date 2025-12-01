@@ -9,7 +9,7 @@ export interface Partner {
 export const partners: Partner[] = [
 	{
 		id: "1",
-		name: "Partner One",
+		name: "Nextlane",
 		logo: "/images/partners/partner-1.webp",
 		description: "A leading innovator in the tech space, collaborating with us to deliver cutting-edge solutions.",
 		website: "https://example.com"
