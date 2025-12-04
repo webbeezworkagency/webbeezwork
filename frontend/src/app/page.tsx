@@ -8,65 +8,60 @@ import { TechStack } from "@/components/sections/TechStack";
 
 import { Logos3 } from "@/components/ui/logos3";
 import { PrivacyPolicyModal } from "@/components/ui/privacy-policy-modal";
+import { partners } from "@/lib/data/partners";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
   return (
     <main className="bg-background min-h-screen text-foreground selection:bg-brand-yellow selection:text-brand-black">
       <Header />
       <Hero />
-      {/* <Logos3
-        heading="Trusted by Innovative Companies"
-        logos={[
-          {
-            id: "logo-1",
-            description: "Astro",
-            image: "https://www.shadcnblocks.com/images/block/logos/astro.svg",
-            className: "h-7 w-auto",
-          },
-          {
-            id: "logo-2",
-            description: "Figma",
-            image: "https://www.shadcnblocks.com/images/block/logos/figma.svg",
-            className: "h-7 w-auto",
-          },
-          {
-            id: "logo-3",
-            description: "Next.js",
-            image: "https://www.shadcnblocks.com/images/block/logos/nextjs.svg",
-            className: "h-7 w-auto",
-          },
-          {
-            id: "logo-4",
-            description: "React",
-            image: "https://www.shadcnblocks.com/images/block/logos/react.png",
-            className: "h-7 w-auto",
-          },
-          {
-            id: "logo-5",
-            description: "shadcn/ui",
-            image: "https://www.shadcnblocks.com/images/block/logos/shadcn-ui.svg",
-            className: "h-7 w-auto",
-          },
-          {
-            id: "logo-6",
-            description: "Supabase",
-            image: "https://www.shadcnblocks.com/images/block/logos/supabase.svg",
-            className: "h-7 w-auto",
-          },
-          {
-            id: "logo-7",
-            description: "Tailwind CSS",
-            image: "https://www.shadcnblocks.com/images/block/logos/tailwind.svg",
-            className: "h-4 w-auto",
-          },
-          {
-            id: "logo-8",
-            description: "Vercel",
-            image: "https://www.shadcnblocks.com/images/block/logos/vercel.svg",
-            className: "h-7 w-auto",
-          },
-        ]}
-      /> */}
+      <section className="bg-brand-gray/20">
+        <Logos3
+          heading="Our Trusted Partners"
+          logos={partners.map((partner) => {
+            // Default classes
+            let className = "h-12 w-auto object-contain dark:invert";
+
+            // Custom overrides
+            if (partner.name === "Improved Corporate Finance") {
+              // Improved logo is WHITE text.
+              // We want BLACK in light mode, WHITE in dark mode.
+              // brightness-0 makes it BLACK.
+              // dark:invert turns that BLACK to WHITE.
+              className = "h-8 w-auto object-contain brightness-0 dark:invert";
+            } else if (partner.name === "MET14") {
+              // MET14 is a badge/image, keep original colors usually.
+              className = "h-16 w-auto object-contain";
+            } else if (partner.name.includes("Empactify") || partner.name.includes("Dolores")) {
+              // Placeholders are Transparent SVGs with BLACK text.
+              // Light: brightness-0 -> Black.
+              // Dark: brightness-0 -> Black -> dark:invert -> White.
+              className = "h-12 w-auto object-contain brightness-0 dark:invert";
+            }
+
+            return {
+              id: partner.id,
+              description: partner.name,
+              image: partner.logo,
+              className: className,
+            };
+          })}
+        />
+
+        <div className="container mx-auto px-6 pb-20">
+          <div className="flex justify-center -mt-10 relative z-10">
+            <Link
+              href="/partners"
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-brand-yellow text-brand-black rounded-full font-bold text-lg hover:bg-brand-yellow/90 transition-all hover:scale-105"
+            >
+              View All Partners
+              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
       <ServiceBento />
       <TechStack />
       <CaseStudyPreview />
@@ -103,6 +98,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </main>
+    </main >
   );
 }

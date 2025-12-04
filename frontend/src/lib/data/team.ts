@@ -27,7 +27,7 @@ export const teamMembers = [
 		name: "Gideon Parker",
 		role: "Head of Performance",
 		bio: "Managed $5M+ in ad spend.",
-		image: "/images/team_portrait_group.png", // Placeholder
+		image: "https://placehold.co/400x400/1a1a1a/ffffff?text=Gideon", // Placeholder
 		height: "h-[400px]",
 		designation: "Head of Performance",
 	},
