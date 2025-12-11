@@ -76,7 +76,7 @@ const Logos3 = ({
 }: Logos3Props) => {
 	return (
 		<section className="py-20">
-			<div className="container flex flex-col items-center text-center">
+			<div className="container mx-auto flex flex-col items-center text-center">
 				<h1 className="my-6 text-2xl font-bold text-pretty lg:text-4xl text-foreground">
 					{heading}
 				</h1>
@@ -106,8 +106,8 @@ const Logos3 = ({
 							))}
 						</CarouselContent>
 					</Carousel>
-					<div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent"></div>
-					<div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent"></div>
+					<div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-inherit to-transparent"></div>
+					<div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-inherit to-transparent"></div>
 				</div>
 			</div>
 		</section>

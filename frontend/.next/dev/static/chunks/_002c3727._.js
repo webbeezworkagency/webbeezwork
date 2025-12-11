@@ -282,18 +282,54 @@ __turbopack_context__.s([
 ]);
 const caseStudies = [
     {
-        id: 1,
-        client: "Sapana Lodge",
-        category: "Google Ads (SEA)",
-        description: "At Sapana Lodge, we provided targeted and results-driven Google Ads services to support their digital marketing goals. Our expert team developed and managed a tailored advertising strategy designed to attract eco-conscious travelers and boost direct bookings.",
+        id: 5,
+        client: "U-Spa",
+        category: "Website Redesign & SEO",
+        description: "A complete digital transformation for U-Spa, featuring a premium website rebuild using WordPress + Elementor and a comprehensive SEO overhaul. We delivered a modern, high-performance site that perfectly reflects their brand identity while significantly boosting organic visibility and user engagement.",
         stats: [
             {
-                label: "Clicks",
+                label: "Organic Traffic",
+                value: "+38%"
+            },
+            {
+                label: "Faster Load Time",
+                value: "54%"
+            },
+            {
+                label: "Search Impressions",
+                value: "2x"
+            },
+            {
+                label: "Lower Bounce Rate",
+                value: "27%"
+            }
+        ],
+        image: "/images/u_spa.png",
+        result: "38% Traffic Boost",
+        service: "Web Design & SEO",
+        link: "https://u-spa.nl/"
+    },
+    {
+        id: 1,
+        client: "Sapana Lodge",
+        category: "Google Ads & SEO",
+        description: "Webbeezwork launched a unified acquisition strategy combining targeted Google Ads (SEA) with a technical SEO and social media overhaul. We focused on eco-tourism segments to drive high-quality traffic and increase direct bookings, reducing dependency on OTAs.",
+        stats: [
+            {
+                label: "Direct Bookings",
+                value: "+20%"
+            },
+            {
+                label: "Organic Visits",
+                value: "+32%"
+            },
+            {
+                label: "Ad Clicks",
                 value: "1.42K"
             },
             {
-                label: "Impressions",
-                value: "68.5K"
+                label: "CPC Reduction",
+                value: "18%"
             }
         ],
         image: "/images/sapana_lodge.png",
@@ -3346,7 +3382,7 @@ const Logos3 = ({ heading = "Trusted by these companies", logos = [
         className: "py-20",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "container flex flex-col items-center text-center",
+                className: "container mx-auto flex flex-col items-center text-center",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                     className: "my-6 text-2xl font-bold text-pretty lg:text-4xl text-foreground",
                     children: heading
@@ -3416,14 +3452,14 @@ const Logos3 = ({ heading = "Trusted by these companies", logos = [
                             columnNumber: 6
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent"
+                            className: "absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-inherit to-transparent"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/logos3.tsx",
                             lineNumber: 109,
                             columnNumber: 6
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent"
+                            className: "absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-inherit to-transparent"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/logos3.tsx",
                             lineNumber: 110,

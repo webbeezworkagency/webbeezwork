@@ -5,6 +5,20 @@ export default function AnimatedTestimonialsDemo() {
 	const testimonials = [
 		{
 			quote:
+				"Webbeezwork completely transformed our website while keeping our original brand identity intact. The new site is faster, smoother, and so easy for us to update. We’ve also seen a big jump in our Google visibility and organic traffic thanks to their SEO work. It feels like U-Spa finally has the website it deserves.",
+			name: "U-Spa Management Team",
+			designation: "U-Spa",
+			src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=3461&auto=format&fit=crop",
+		},
+		{
+			quote:
+				"Working with Webbeezwork has given us consistent, high-quality traffic and a real lift in direct bookings. Their Google Ads and SEO strategy helped us reach more eco-travelers, and we saw a 20% increase in bookings within just a few months.",
+			name: "Sapana Lodge Team",
+			designation: "Sapana Lodge",
+			src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3387&auto=format&fit=crop",
+		},
+		{
+			quote:
 				"Webbeezwork transformed our online presence. Their strategic approach to SEO and design doubled our traffic in just 3 months.",
 			name: "Sarah Chen",
 			designation: "Product Manager at TechFlow",

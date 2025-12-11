@@ -21,24 +21,28 @@ export default function Home() {
         <Logos3
           heading="Our Trusted Partners"
           logos={partners.map((partner) => {
-            // Default classes
-            let className = "h-12 w-auto object-contain dark:invert";
+            // Default classes for most logos
+            let className = "h-12 w-auto object-contain";
 
-            // Custom overrides
+            // Custom overrides based on logo characteristics
             if (partner.name === "Improved Corporate Finance") {
-              // Improved logo is WHITE text.
-              // We want BLACK in light mode, WHITE in dark mode.
-              // brightness-0 makes it BLACK.
-              // dark:invert turns that BLACK to WHITE.
-              className = "h-8 w-auto object-contain brightness-0 dark:invert";
+              // SVG logo - invert for dark mode
+              className = "h-10 w-auto object-contain dark:invert";
             } else if (partner.name === "MET14") {
-              // MET14 is a badge/image, keep original colors usually.
+              // MET14 badge logo
               className = "h-16 w-auto object-contain";
-            } else if (partner.name.includes("Empactify") || partner.name.includes("Dolores")) {
-              // Placeholders are Transparent SVGs with BLACK text.
-              // Light: brightness-0 -> Black.
-              // Dark: brightness-0 -> Black -> dark:invert -> White.
-              className = "h-12 w-auto object-contain brightness-0 dark:invert";
+            } else if (partner.name === "Empactify") {
+              // Favicon - small icon
+              className = "h-10 w-10 object-contain";
+            } else if (partner.name === "Dolores Leeuwin") {
+              // Lion logo
+              className = "h-14 w-auto object-contain";
+            } else if (partner.name === "Lingeman") {
+              // Lingeman logo
+              className = "h-12 w-auto object-contain";
+            } else if (partner.name === "The Whitelist") {
+              // Whitelist logo
+              className = "h-12 w-auto object-contain";
             }
 
             return {

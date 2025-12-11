@@ -255,18 +255,54 @@ __turbopack_context__.s([
 ]);
 const caseStudies = [
     {
-        id: 1,
-        client: "Sapana Lodge",
-        category: "Google Ads (SEA)",
-        description: "At Sapana Lodge, we provided targeted and results-driven Google Ads services to support their digital marketing goals. Our expert team developed and managed a tailored advertising strategy designed to attract eco-conscious travelers and boost direct bookings.",
+        id: 5,
+        client: "U-Spa",
+        category: "Website Redesign & SEO",
+        description: "A complete digital transformation for U-Spa, featuring a premium website rebuild using WordPress + Elementor and a comprehensive SEO overhaul. We delivered a modern, high-performance site that perfectly reflects their brand identity while significantly boosting organic visibility and user engagement.",
         stats: [
             {
-                label: "Clicks",
+                label: "Organic Traffic",
+                value: "+38%"
+            },
+            {
+                label: "Faster Load Time",
+                value: "54%"
+            },
+            {
+                label: "Search Impressions",
+                value: "2x"
+            },
+            {
+                label: "Lower Bounce Rate",
+                value: "27%"
+            }
+        ],
+        image: "/images/u_spa.png",
+        result: "38% Traffic Boost",
+        service: "Web Design & SEO",
+        link: "https://u-spa.nl/"
+    },
+    {
+        id: 1,
+        client: "Sapana Lodge",
+        category: "Google Ads & SEO",
+        description: "Webbeezwork launched a unified acquisition strategy combining targeted Google Ads (SEA) with a technical SEO and social media overhaul. We focused on eco-tourism segments to drive high-quality traffic and increase direct bookings, reducing dependency on OTAs.",
+        stats: [
+            {
+                label: "Direct Bookings",
+                value: "+20%"
+            },
+            {
+                label: "Organic Visits",
+                value: "+32%"
+            },
+            {
+                label: "Ad Clicks",
                 value: "1.42K"
             },
             {
-                label: "Impressions",
-                value: "68.5K"
+                label: "CPC Reduction",
+                value: "18%"
             }
         ],
         image: "/images/sapana_lodge.png",
@@ -976,6 +1012,18 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$a
 function AnimatedTestimonialsDemo() {
     const testimonials = [
         {
+            quote: "Webbeezwork completely transformed our website while keeping our original brand identity intact. The new site is faster, smoother, and so easy for us to update. We’ve also seen a big jump in our Google visibility and organic traffic thanks to their SEO work. It feels like U-Spa finally has the website it deserves.",
+            name: "U-Spa Management Team",
+            designation: "U-Spa",
+            src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=3461&auto=format&fit=crop"
+        },
+        {
+            quote: "Working with Webbeezwork has given us consistent, high-quality traffic and a real lift in direct bookings. Their Google Ads and SEO strategy helped us reach more eco-travelers, and we saw a 20% increase in bookings within just a few months.",
+            name: "Sapana Lodge Team",
+            designation: "Sapana Lodge",
+            src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3387&auto=format&fit=crop"
+        },
+        {
             quote: "Webbeezwork transformed our online presence. Their strategic approach to SEO and design doubled our traffic in just 3 months.",
             name: "Sarah Chen",
             designation: "Product Manager at TechFlow",
@@ -1011,7 +1059,7 @@ function AnimatedTestimonialsDemo() {
         autoplay: true
     }, void 0, false, {
         fileName: "[project]/src/components/sections/AnimatedTestimonialsDemo.tsx",
-        lineNumber: 42,
+        lineNumber: 56,
         columnNumber: 9
     }, this);
 }
