@@ -26,9 +26,9 @@ export const caseStudies = [
 			{ label: "Ad Clicks", value: "1.42K" },
 			{ label: "CPC Reduction", value: "18%" }
 		],
-		image: "/images/sapana_lodge.png",
-		result: "1.42K Clicks", 
-		service: "Google Ads (SEA)", 
+		image: "/images/sapana_lodge_v2.png",
+		result: "1.42K Clicks",
+		service: "Google Ads (SEA)",
 		link: "https://www.sapanalodge.com/"
 	},
 	{
