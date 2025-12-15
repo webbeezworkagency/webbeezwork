@@ -80,6 +80,45 @@ export default function TeamPage() {
 					{/* Bottom Row: 5 Members with Height Curve */}
 					<TeamHorizontalScroll members={teamBottom} />
 
+					{/* Team Group Photo */}
+					<motion.div
+						initial={{ opacity: 0, y: 40 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.8, ease: "easeOut" }}
+						className="mt-32 relative"
+					>
+						<div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl shadow-brand-yellow/5 group">
+							<div className="absolute inset-0 bg-brand-yellow/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay" />
+
+							<div className="relative aspect-[16/9] w-full">
+								<Image
+									src="/images/team-group.jpg"
+									alt="Webbeezwork Team Group"
+									fill
+									priority
+									quality={100}
+									unoptimized
+									className="object-cover transition-transform duration-1000 group-hover:scale-105 filter brightness-[0.9] group-hover:brightness-100"
+								/>
+							</div>
+
+							{/* Cinematic Overlay */}
+							<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20" />
+
+							{/* Caption */}
+							<div className="absolute bottom-0 left-0 w-full p-8 md:p-12 z-30 flex flex-col md:flex-row items-end justify-between gap-6 pointer-events-none">
+								<div>
+									<h2 className="text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight">The Force Behind the Vision</h2>
+									<p className="text-white/80 text-lg md:text-xl max-w-xl">
+										United by creativity, driven by impact. We are the ones who make it happen.
+									</p>
+								</div>
+
+							</div>
+						</div>
+					</motion.div>
+
 				</div>
 			</section>
 

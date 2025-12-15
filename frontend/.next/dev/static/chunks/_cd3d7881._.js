@@ -282,44 +282,60 @@ __turbopack_context__.s([
 ]);
 const caseStudies = [
     {
-        id: 1,
-        client: "Sapana Lodge",
-        category: "Google Ads (SEA)",
-        description: "At Sapana Lodge, we provided targeted and results-driven Google Ads services to support their digital marketing goals. Our expert team developed and managed a tailored advertising strategy designed to attract eco-conscious travelers and boost direct bookings.",
+        id: 5,
+        client: "U-Spa",
+        category: "Website Redesign & SEO",
+        description: "A complete digital transformation for U-Spa, featuring a premium website rebuild using WordPress + Elementor and a comprehensive SEO overhaul. We delivered a modern, high-performance site that perfectly reflects their brand identity while significantly boosting organic visibility and user engagement.",
         stats: [
             {
-                label: "Clicks",
+                label: "Organic Traffic",
+                value: "+38%"
+            },
+            {
+                label: "Faster Load Time",
+                value: "54%"
+            },
+            {
+                label: "Search Impressions",
+                value: "2x"
+            },
+            {
+                label: "Lower Bounce Rate",
+                value: "27%"
+            }
+        ],
+        image: "/images/u_spa_v2.png",
+        result: "38% Traffic Boost",
+        service: "Web Design & SEO",
+        link: "https://u-spa.nl/"
+    },
+    {
+        id: 1,
+        client: "Sapana Lodge",
+        category: "Google Ads & SEO",
+        description: "Webbeezwork launched a unified acquisition strategy combining targeted Google Ads (SEA) with a technical SEO and social media overhaul. We focused on eco-tourism segments to drive high-quality traffic and increase direct bookings, reducing dependency on OTAs.",
+        stats: [
+            {
+                label: "Direct Bookings",
+                value: "+20%"
+            },
+            {
+                label: "Organic Visits",
+                value: "+32%"
+            },
+            {
+                label: "Ad Clicks",
                 value: "1.42K"
             },
             {
-                label: "Impressions",
-                value: "68.5K"
+                label: "CPC Reduction",
+                value: "18%"
             }
         ],
-        image: "/images/sapana_lodge.png",
+        image: "/images/sapana_lodge_v2.png",
         result: "1.42K Clicks",
         service: "Google Ads (SEA)",
         link: "https://www.sapanalodge.com/"
-    },
-    {
-        id: 2,
-        client: "Napoleon Selection",
-        category: "SEO & Social Media",
-        description: "Comprehensive digital growth strategy focusing on SEO optimization and social media engagement to increase brand visibility and customer acquisition.",
-        stats: [
-            {
-                label: "Growth",
-                value: "Full"
-            },
-            {
-                label: "Service",
-                value: "360°"
-            }
-        ],
-        image: "/images/case_study_1.png",
-        result: "360° Growth",
-        service: "SEO & Social",
-        link: "https://npselectiongh.com/blog"
     },
     {
         id: 3,
@@ -938,7 +954,7 @@ const teamMembers = [
         name: "Gideon Parker",
         role: "Head of Performance",
         bio: "Managed $5M+ in ad spend.",
-        image: "/images/team_portrait_group.png",
+        image: "https://placehold.co/400x400/1a1a1a/ffffff?text=Gideon",
         height: "h-[400px]",
         designation: "Head of Performance"
     },
@@ -1465,6 +1481,102 @@ function TeamPage() {
                             fileName: "[project]/src/app/team/page.tsx",
                             lineNumber: 81,
                             columnNumber: 6
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$24_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                            initial: {
+                                opacity: 0,
+                                y: 40
+                            },
+                            whileInView: {
+                                opacity: 1,
+                                y: 0
+                            },
+                            viewport: {
+                                once: true
+                            },
+                            transition: {
+                                duration: 0.8,
+                                ease: "easeOut"
+                            },
+                            className: "mt-32 relative",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl shadow-brand-yellow/5 group",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute inset-0 bg-brand-yellow/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/team/page.tsx",
+                                        lineNumber: 92,
+                                        columnNumber: 8
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "relative aspect-[16/9] w-full",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                            src: "/images/team-group.jpg",
+                                            alt: "Webbeezwork Team Group",
+                                            fill: true,
+                                            priority: true,
+                                            quality: 100,
+                                            unoptimized: true,
+                                            className: "object-cover transition-transform duration-1000 group-hover:scale-105 filter brightness-[0.9] group-hover:brightness-100"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/team/page.tsx",
+                                            lineNumber: 95,
+                                            columnNumber: 9
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/team/page.tsx",
+                                        lineNumber: 94,
+                                        columnNumber: 8
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/team/page.tsx",
+                                        lineNumber: 107,
+                                        columnNumber: 8
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "absolute bottom-0 left-0 w-full p-8 md:p-12 z-30 flex flex-col md:flex-row items-end justify-between gap-6 pointer-events-none",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                    className: "text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight",
+                                                    children: "The Force Behind the Vision"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/team/page.tsx",
+                                                    lineNumber: 112,
+                                                    columnNumber: 10
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-white/80 text-lg md:text-xl max-w-xl",
+                                                    children: "United by creativity, driven by impact. We are the ones who make it happen."
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/team/page.tsx",
+                                                    lineNumber: 113,
+                                                    columnNumber: 10
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/app/team/page.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 9
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/team/page.tsx",
+                                        lineNumber: 110,
+                                        columnNumber: 8
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/team/page.tsx",
+                                lineNumber: 91,
+                                columnNumber: 7
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/team/page.tsx",
+                            lineNumber: 84,
+                            columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
@@ -1483,12 +1595,12 @@ function TeamPage() {
                     children: "© 2025 Webbeezwork. All rights reserved."
                 }, void 0, false, {
                     fileName: "[project]/src/app/team/page.tsx",
-                    lineNumber: 87,
+                    lineNumber: 126,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/team/page.tsx",
-                lineNumber: 86,
+                lineNumber: 125,
                 columnNumber: 4
             }, this)
         ]
