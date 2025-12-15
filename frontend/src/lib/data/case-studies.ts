@@ -10,7 +10,7 @@ export const caseStudies = [
 			{ label: "Search Impressions", value: "2x" },
 			{ label: "Lower Bounce Rate", value: "27%" }
 		],
-		image: "/images/u_spa.png",
+		image: "/images/u_spa_v2.png",
 		result: "38% Traffic Boost",
 		service: "Web Design & SEO",
 		link: "https://u-spa.nl/"
