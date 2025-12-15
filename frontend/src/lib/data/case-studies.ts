@@ -31,20 +31,7 @@ export const caseStudies = [
 		service: "Google Ads (SEA)",
 		link: "https://www.sapanalodge.com/"
 	},
-	{
-		id: 2,
-		client: "Napoleon Selection",
-		category: "SEO & Social Media",
-		description: "Comprehensive digital growth strategy focusing on SEO optimization and social media engagement to increase brand visibility and customer acquisition.",
-		stats: [
-			{ label: "Growth", value: "Full" },
-			{ label: "Service", value: "360°" }
-		],
-		image: "/images/case_study_1.png",
-		result: "360° Growth",
-		service: "SEO & Social",
-		link: "https://npselectiongh.com/blog"
-	},
+
 	{
 		id: 3,
 		client: "Maxreez Arts",
