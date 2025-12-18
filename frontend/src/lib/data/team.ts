@@ -9,27 +9,27 @@ export const teamMembers = [
 	{
 		id: 1,
 		name: "Emile Van de Klok",
-		role: "Founder & CEO",
+		role: "Co-Founder & CEO",
 		bio: "Visionary leader driving digital growth strategies for global brands.",
 		image: emile,
-		designation: "Founder & CEO", // For AnimatedTooltip
+		designation: "Co-Founder & CEO", // For AnimatedTooltip
 	},
 	{
 		id: 2,
 		name: "Nellie Kirschner - Timmer",
-		role: "Creative Director",
+		role: "Co-Founder & COO",
 		bio: "Award-winning designer specializing in motion UI.",
 		image: nellie,
-		designation: "Creative Director",
+		designation: "Co-Founder & COO",
 	},
 	{
 		id: 3,
 		name: "Gideon Parker",
-		role: "Head of Performance",
+		role: "Digital Agency Director",
 		bio: "Managed $5M+ in ad spend.",
 		image: "https://placehold.co/400x400/1a1a1a/ffffff?text=Gideon", // Placeholder
 		height: "h-[400px]",
-		designation: "Head of Performance",
+		designation: "Digital Agency Director",
 	},
 	{
 		id: 4,
