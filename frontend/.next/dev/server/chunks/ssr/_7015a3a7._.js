@@ -1067,20 +1067,20 @@ const teamMembers = [
     {
         id: 5,
         name: "Isaac Abekah",
-        role: "SEO Specialist",
-        bio: "Technical Seo Specialist.",
+        role: "SEO Expert / Digital Marketer / Software Engineer / UI Designer / Graphic Designer",
+        bio: "I make sure Webbeezwork is visible across all search engines and is accessible everywhere.",
         image: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$images$2f$Abekah$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$public$2f$images$2f$Abekah$2e$jpg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
         height: "h-[400px]",
-        designation: "SEO Specialist"
+        designation: "SEO Expert / Digital Marketer..."
     },
     {
         id: 6,
         name: "Ann Apeani",
-        role: "Social Media Manager",
-        bio: "Social Media Leads Specialist.",
+        role: "UI/UX Designer/Digital Marketer",
+        bio: "Ann is a UI/UX Designer and Digital Marketer at Webbeezwork, combining thoughtful design with strategic marketing to create seamless, high-performing digital experiences. She focuses on user-centered design, brand consistency, and data-driven growth across every project she leads.",
         image: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$images$2f$Ann$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$public$2f$images$2f$Ann$2e$jpg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
         height: "h-[320px]",
-        designation: "Social Media Manager"
+        designation: "UI/UX Designer/Digital Marketer"
     },
     {
         id: 7,
