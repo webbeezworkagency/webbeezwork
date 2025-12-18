@@ -1105,27 +1105,27 @@ const teamMembers = [
     {
         id: 1,
         name: "Emile Van de Klok",
-        role: "Founder & CEO",
+        role: "Co-Founder & CEO",
         bio: "Visionary leader driving digital growth strategies for global brands.",
         image: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$images$2f$emile$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$public$2f$images$2f$emile$2e$jpg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
-        designation: "Founder & CEO"
+        designation: "Co-Founder & CEO"
     },
     {
         id: 2,
         name: "Nellie Kirschner - Timmer",
-        role: "Creative Director",
+        role: "Co-Founder & COO",
         bio: "Award-winning designer specializing in motion UI.",
         image: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$images$2f$Nellie$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$public$2f$images$2f$Nellie$2e$jpg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
-        designation: "Creative Director"
+        designation: "Co-Founder & COO"
     },
     {
         id: 3,
         name: "Gideon Parker",
-        role: "Head of Performance",
+        role: "Digital Agency Director",
         bio: "Managed $5M+ in ad spend.",
         image: "https://placehold.co/400x400/1a1a1a/ffffff?text=Gideon",
         height: "h-[400px]",
-        designation: "Head of Performance"
+        designation: "Digital Agency Director"
     },
     {
         id: 4,
