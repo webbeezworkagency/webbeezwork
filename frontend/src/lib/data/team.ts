@@ -43,11 +43,11 @@ export const teamMembers = [
 	{
 		id: 5,
 		name: "Isaac Abekah",
-		role: "SEO Expert / Digital Marketer / Software Engineer / UI Designer / Graphic Designer",
-		bio: "I make sure Webbeezwork is visible across all search engines and is accessible everywhere.",
+		role: "Software Engineer",
+		bio: "Ensures Webbeezwork is visible across all search engines and is accessible everywhere.",
 		image: isaac,
 		height: "h-[400px]",
-		designation: "SEO Expert / Digital Marketer...",
+		designation: "Software Engineer",
 	},
 	{
 		id: 6,

@@ -1067,11 +1067,11 @@ const teamMembers = [
     {
         id: 5,
         name: "Isaac Abekah",
-        role: "SEO Expert / Digital Marketer / Software Engineer / UI Designer / Graphic Designer",
-        bio: "I make sure Webbeezwork is visible across all search engines and is accessible everywhere.",
+        role: "Software Engineer",
+        bio: "Ensures Webbeezwork is visible across all search engines and is accessible everywhere.",
         image: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$images$2f$Abekah$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$public$2f$images$2f$Abekah$2e$jpg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
         height: "h-[400px]",
-        designation: "SEO Expert / Digital Marketer..."
+        designation: "Software Engineer"
     },
     {
         id: 6,
