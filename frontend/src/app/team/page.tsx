@@ -38,7 +38,7 @@ export default function TeamPage() {
 						</div>
 
 						{/* Image Container */}
-						<div className="relative rounded-none md:rounded-[2.5rem] overflow-hidden border-y md:border border-border/10 shadow-2xl shadow-brand-yellow/5 group w-full">
+						<div className="relative rounded-none md:rounded-[2.5rem] overflow-hidden shadow-2xl shadow-brand-yellow/5 group w-full">
 							<div className="absolute inset-0 bg-brand-yellow/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay hidden md:block" />
 
 							<div className="relative aspect-[4/3] md:aspect-[16/9] w-full">

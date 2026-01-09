@@ -34,3 +34,17 @@ dist-ssr
 *.key
 *.p12
 *.pfx
+
+# next.js
+.next/
+out/
+
+# production
+build
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
