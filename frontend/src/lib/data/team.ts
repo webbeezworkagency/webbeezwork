@@ -13,6 +13,7 @@ export const teamMembers = [
 		bio: "Visionary leader driving digital growth strategies for global brands.",
 		image: emile,
 		designation: "Co-Founder & CEO", // For AnimatedTooltip
+		linkedin: "https://www.linkedin.com/in/evdklok?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
 	},
 	{
 		id: 2,
@@ -21,6 +22,7 @@ export const teamMembers = [
 		bio: "Award-winning designer specializing in motion UI.",
 		image: nellie,
 		designation: "Co-Founder & COO",
+		linkedin: "https://www.linkedin.com/in/nellie-kirschner-timmer-95894a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
 	},
 	{
 		id: 3,
@@ -34,11 +36,11 @@ export const teamMembers = [
 	{
 		id: 4,
 		name: "Munira Nuhu",
-		role: "Content Lead",
-		bio: "Storyteller & Copywriter.",
+		role: "Google Ads Expert & Digital Marketer",
+		bio: "Helps businesses grow through targeted Google Ads and results-driven digital marketing strategies that convert traffic into customers.",
 		image: munira,
 		height: "h-[260px]",
-		designation: "Content Lead",
+		designation: "Google Ads Expert & Digital Marketer",
 	},
 	{
 		id: 5,

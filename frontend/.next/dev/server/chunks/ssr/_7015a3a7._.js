@@ -29,28 +29,28 @@ const transition = {
     restDelta: 0.001,
     restSpeed: 0.001
 };
-const MenuItem = ({ setActive, active, item, href, children })=>{
+const MenuItem = ({ setActive, active, item, href, children, className })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         onMouseEnter: ()=>setActive(item),
         className: "relative ",
         children: [
             href ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 href: href,
-                className: "cursor-pointer text-foreground/80 hover:text-brand-yellow transition-colors font-medium text-sm",
+                className: cn("cursor-pointer text-foreground/80 hover:text-brand-yellow transition-colors font-medium text-sm", className),
                 children: item
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/navbar-menu.tsx",
-                lineNumber: 32,
+                lineNumber: 34,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$24_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
                 transition: {
                     duration: 0.3
                 },
-                className: "cursor-pointer text-foreground/80 hover:text-brand-yellow transition-colors font-medium text-sm",
+                className: cn("cursor-pointer text-foreground/80 hover:text-brand-yellow transition-colors font-medium text-sm", className),
                 children: item
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/navbar-menu.tsx",
-                lineNumber: 36,
+                lineNumber: 38,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0)),
             active !== null && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$24_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -77,28 +77,28 @@ const MenuItem = ({ setActive, active, item, href, children })=>{
                             children: children
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/navbar-menu.tsx",
-                            lineNumber: 56,
+                            lineNumber: 58,
                             columnNumber: 9
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/navbar-menu.tsx",
-                        lineNumber: 51,
+                        lineNumber: 53,
                         columnNumber: 8
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/navbar-menu.tsx",
-                    lineNumber: 50,
+                    lineNumber: 52,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/navbar-menu.tsx",
-                lineNumber: 44,
+                lineNumber: 46,
                 columnNumber: 5
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/navbar-menu.tsx",
-        lineNumber: 30,
+        lineNumber: 32,
         columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -109,7 +109,7 @@ const Menu = ({ setActive, children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/ui/navbar-menu.tsx",
-        lineNumber: 79,
+        lineNumber: 81,
         columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -126,7 +126,7 @@ const ProductItem = ({ title, description, href, src })=>{
                 className: "shrink-0 rounded-md shadow-2xl object-cover"
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/navbar-menu.tsx",
-                lineNumber: 101,
+                lineNumber: 103,
                 columnNumber: 4
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -136,7 +136,7 @@ const ProductItem = ({ title, description, href, src })=>{
                         children: title
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/navbar-menu.tsx",
-                        lineNumber: 109,
+                        lineNumber: 111,
                         columnNumber: 5
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_$40$babel$2b$core$40$7$2e$28$2e$5_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -144,19 +144,19 @@ const ProductItem = ({ title, description, href, src })=>{
                         children: description
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/navbar-menu.tsx",
-                        lineNumber: 112,
+                        lineNumber: 114,
                         columnNumber: 5
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/navbar-menu.tsx",
-                lineNumber: 108,
+                lineNumber: 110,
                 columnNumber: 4
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/navbar-menu.tsx",
-        lineNumber: 100,
+        lineNumber: 102,
         columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -167,7 +167,7 @@ const HoveredLink = ({ children, ...rest })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/ui/navbar-menu.tsx",
-        lineNumber: 122,
+        lineNumber: 124,
         columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1036,7 +1036,8 @@ const teamMembers = [
         role: "Co-Founder & CEO",
         bio: "Visionary leader driving digital growth strategies for global brands.",
         image: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$images$2f$emile$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$public$2f$images$2f$emile$2e$jpg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
-        designation: "Co-Founder & CEO"
+        designation: "Co-Founder & CEO",
+        linkedin: "https://www.linkedin.com/in/evdklok?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     {
         id: 2,
@@ -1044,7 +1045,8 @@ const teamMembers = [
         role: "Co-Founder & COO",
         bio: "Award-winning designer specializing in motion UI.",
         image: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$images$2f$Nellie$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$public$2f$images$2f$Nellie$2e$jpg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
-        designation: "Co-Founder & COO"
+        designation: "Co-Founder & COO",
+        linkedin: "https://www.linkedin.com/in/nellie-kirschner-timmer-95894a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     {
         id: 3,
@@ -1058,11 +1060,11 @@ const teamMembers = [
     {
         id: 4,
         name: "Munira Nuhu",
-        role: "Content Lead",
-        bio: "Storyteller & Copywriter.",
+        role: "Google Ads Expert & Digital Marketer",
+        bio: "Helps businesses grow through targeted Google Ads and results-driven digital marketing strategies that convert traffic into customers.",
         image: __TURBOPACK__imported__module__$5b$project$5d2f$public$2f$images$2f$Munira$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$public$2f$images$2f$Munira$2e$jpg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
         height: "h-[260px]",
-        designation: "Content Lead"
+        designation: "Google Ads Expert & Digital Marketer"
     },
     {
         id: 5,

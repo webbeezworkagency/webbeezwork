@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const transition = {
 	type: "spring",
@@ -19,23 +20,25 @@ export const MenuItem = ({
 	item,
 	href,
 	children,
+	className,
 }: {
 	setActive: (item: string) => void;
 	active: string | null;
 	item: string;
 	href?: string;
 	children?: React.ReactNode;
+	className?: string; // Allow custom classes
 }) => {
 	return (
 		<div onMouseEnter={() => setActive(item)} className="relative ">
 			{href ? (
-				<Link href={href} className="cursor-pointer text-foreground/80 hover:text-brand-yellow transition-colors font-medium text-sm">
+				<Link href={href} className={cn("cursor-pointer text-foreground/80 hover:text-brand-yellow transition-colors font-medium text-sm", className)}>
 					{item}
 				</Link>
 			) : (
 				<motion.p
 					transition={{ duration: 0.3 }}
-					className="cursor-pointer text-foreground/80 hover:text-brand-yellow transition-colors font-medium text-sm"
+					className={cn("cursor-pointer text-foreground/80 hover:text-brand-yellow transition-colors font-medium text-sm", className)}
 				>
 					{item}
 				</motion.p>

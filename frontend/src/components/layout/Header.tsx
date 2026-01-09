@@ -16,7 +16,7 @@ export function Header() {
 	const toggleMenu = () => setIsOpen(!isOpen);
 
 	return (
-		<header className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-foreground/10">
+		<header className="fixed top-0 left-0 w-full z-50 bg-[#ffed00] border-b border-black/10">
 			<div className="container mx-auto px-6 h-20 flex items-center justify-between">
 				<Link href="/" className="block relative w-32 md:w-40 h-10 md:h-12 z-50">
 					<Image
@@ -31,7 +31,7 @@ export function Header() {
 				{/* Desktop Nav */}
 				<div className="hidden md:flex items-center justify-center">
 					<Menu setActive={setActive}>
-						<MenuItem setActive={setActive} active={active} item="Services" href="/services">
+						<MenuItem setActive={setActive} active={active} item="Services" href="/services" className="text-black/80 hover:text-white">
 							<div className="flex flex-col space-y-4 text-sm">
 								<HoveredLink href="/services/seo">SEO Optimization</HoveredLink>
 								<HoveredLink href="/services/google-ads">Google Ads (SEA)</HoveredLink>
@@ -39,7 +39,7 @@ export function Header() {
 								<HoveredLink href="/services/gmb-optimization">GMB Optimization</HoveredLink>
 							</div>
 						</MenuItem>
-						<MenuItem setActive={setActive} active={active} item="Work" href="/case-studies">
+						<MenuItem setActive={setActive} active={active} item="Work" href="/case-studies" className="text-black/80 hover:text-white">
 							<div className="text-sm grid grid-cols-2 gap-10 p-4">
 								{caseStudies.map((study) => (
 									<ProductItem
@@ -52,15 +52,15 @@ export function Header() {
 								))}
 							</div>
 						</MenuItem>
-						<Link href="/team" className="text-foreground/80 hover:text-brand-yellow transition-colors font-medium text-sm pt-0.5">Team</Link>
-						<Link href="/about" className="text-foreground/80 hover:text-brand-yellow transition-colors font-medium text-sm pt-0.5">About</Link>
+						<Link href="/team" className="text-black/80 hover:text-white transition-colors font-medium text-sm pt-0.5">Team</Link>
+						<Link href="/about" className="text-black/80 hover:text-white transition-colors font-medium text-sm pt-0.5">About</Link>
 					</Menu>
 				</div>
 
 
 
 				<div className="flex items-center gap-3 md:gap-4">
-					<div className="hidden md:block">
+					<div className="hidden md:block text-black hover:text-black/70 transition-colors">
 						<ThemeToggle />
 					</div>
 					<a
@@ -77,10 +77,12 @@ export function Header() {
 
 					{/* Mobile Menu Toggle */}
 					<div className="flex items-center gap-2 md:hidden">
-						<ThemeToggle />
+						<div className="text-black hover:text-black/70 transition-colors">
+							<ThemeToggle />
+						</div>
 						<button
 							onClick={toggleMenu}
-							className="p-2 text-foreground z-[70] relative hover:text-brand-yellow transition-colors"
+							className="p-2 text-black z-[70] relative hover:text-black/70 transition-colors"
 						>
 							{isOpen ? <X className="w-8 h-8" /> : <MenuIcon className="w-8 h-8" />}
 						</button>
