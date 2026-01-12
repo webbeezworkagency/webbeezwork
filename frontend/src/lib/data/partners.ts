@@ -11,7 +11,7 @@ export const partners: Partner[] = [
 		id: "1",
 		name: "MET14",
 		logo: "/images/partners/logos/met14-logo.png",
-		description: "Specialists in interim management and executive search, connecting top talent with leading organizations.",
+		description: "Dive into the world of visual storytelling with MET14, your trusted partner in creating captivating content. At MET14, we specialize in bringing your purpose and vision to life through the lens of both film and photography.",
 		website: "https://www.met14.nl/"
 	},
 	{
