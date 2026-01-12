@@ -51,7 +51,9 @@ export default function PartnersPage() {
 										src={partner.logo}
 										alt={partner.name}
 										fill
-										className="object-contain p-4 filter grayscale group-hover:grayscale-0 transition-all duration-500"
+										quality={100}
+										unoptimized
+										className="object-contain p-4 transition-all duration-500"
 									/>
 								</div>
 

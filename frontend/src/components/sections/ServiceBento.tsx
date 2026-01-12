@@ -19,7 +19,7 @@ const services = [
 		desc: "High-ROAS campaigns that convert clicks into revenue.",
 		icon: Megaphone,
 		colSpan: "md:col-span-1",
-		bg: "bg-brand-gray-light"
+		bg: "bg-brand-gray"
 	},
 	{
 		id: "gmb",
@@ -27,7 +27,7 @@ const services = [
 		desc: "A boost for your local market. Display your info on Google search & Maps.",
 		icon: MapPinned,
 		colSpan: "md:col-span-1",
-		bg: "bg-brand-gray-light"
+		bg: "bg-brand-gray"
 	},
 	{
 		id: "health",
@@ -60,7 +60,7 @@ const services = [
 		desc: "High-performance websites built for conversion.",
 		icon: Laptop,
 		colSpan: "md:col-span-2",
-		bg: "bg-brand-gray-light"
+		bg: "bg-brand-gray"
 	}
 ];
 

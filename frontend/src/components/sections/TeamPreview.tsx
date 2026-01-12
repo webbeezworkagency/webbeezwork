@@ -35,7 +35,7 @@ export function TeamPreview() {
 						viewport={{ once: true }}
 						className="w-full lg:w-1/2 grid grid-cols-2 gap-4"
 					>
-							<motion.div
+						<motion.div
 							initial={{ opacity: 0, scale: 0.8, y: 50 }}
 							whileInView={{ opacity: 1, scale: 1, y: 0 }}
 							viewport={{ once: true, amount: 0.5 }}
@@ -46,6 +46,7 @@ export function TeamPreview() {
 								src="/images/Abekah.jpg"
 								alt="Isaac Abekah - Team Member"
 								fill
+								unoptimized
 								className="object-cover"
 							/>
 						</motion.div>
@@ -60,6 +61,7 @@ export function TeamPreview() {
 								src="/images/Munira.jpg"
 								alt="Munira - Team Member"
 								fill
+								unoptimized
 								className="object-cover"
 							/>
 						</motion.div>

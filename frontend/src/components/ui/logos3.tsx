@@ -75,14 +75,14 @@ const Logos3 = ({
 	],
 }: Logos3Props) => {
 	return (
-		<section className="py-20">
+		<section className="py-20 w-full overflow-hidden">
 			<div className="container mx-auto flex flex-col items-center text-center">
 				<h1 className="my-6 text-2xl font-bold text-pretty lg:text-4xl text-foreground">
 					{heading}
 				</h1>
 			</div>
 			<div className="pt-10 md:pt-16 lg:pt-20">
-				<div className="relative mx-auto flex items-center justify-center lg:max-w-5xl">
+				<div className="relative mx-auto flex items-center justify-center lg:max-w-5xl w-full">
 					<Carousel
 						opts={{ loop: true }}
 						plugins={[AutoScroll({ playOnInit: true })]}

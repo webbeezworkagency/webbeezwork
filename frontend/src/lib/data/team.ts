@@ -4,6 +4,7 @@ import ann from "../../../public/images/Ann.jpg";
 import isaac from "../../../public/images/Abekah.jpg";
 import munira from "../../../public/images/Munira.jpg";
 import nellie from "../../../public/images/Nellie.jpg";
+import parker from "../../../public/images/parker.png";
 
 export const teamMembers = [
 	{
@@ -29,7 +30,7 @@ export const teamMembers = [
 		name: "Gideon Parker",
 		role: "Digital Agency Director",
 		bio: "Managed $5M+ in ad spend.",
-		image: "https://placehold.co/400x400/1a1a1a/ffffff?text=Gideon", // Placeholder
+		image: parker,
 		height: "h-[400px]",
 		designation: "Digital Agency Director",
 	},

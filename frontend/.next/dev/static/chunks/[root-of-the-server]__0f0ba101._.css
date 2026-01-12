@@ -847,10 +847,6 @@
     margin-top: calc(var(--spacing) * 12);
   }
 
-  .mt-32 {
-    margin-top: calc(var(--spacing) * 32);
-  }
-
   .-mr-4 {
     margin-right: calc(var(--spacing) * -4);
   }
@@ -889,10 +885,6 @@
 
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
-  }
-
-  .mb-24 {
-    margin-bottom: calc(var(--spacing) * 24);
   }
 
   .mb-32 {
@@ -940,10 +932,6 @@
 
   .aspect-\[4\/3\] {
     aspect-ratio: 4 / 3;
-  }
-
-  .aspect-\[16\/9\] {
-    aspect-ratio: 16 / 9;
   }
 
   .size-full {
@@ -1512,10 +1500,6 @@
     border-radius: var(--radius-3xl);
   }
 
-  .rounded-\[2\.5rem\] {
-    border-radius: 2.5rem;
-  }
-
   .rounded-full {
     border-radius: 3.40282e38px;
   }
@@ -1696,10 +1680,6 @@
 
   .bg-brand-gray {
     background-color: var(--brand-gray);
-  }
-
-  .bg-brand-gray-light {
-    background-color: var(--brand-gray-light);
   }
 
   .bg-brand-gray\/10 {
@@ -2108,10 +2088,6 @@
     padding-top: calc(var(--spacing) * 24);
   }
 
-  .pt-32 {
-    padding-top: calc(var(--spacing) * 32);
-  }
-
   .pt-40 {
     padding-top: calc(var(--spacing) * 40);
   }
@@ -2122,10 +2098,6 @@
 
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
-  }
-
-  .pb-6 {
-    padding-bottom: calc(var(--spacing) * 6);
   }
 
   .pb-16 {
@@ -2469,11 +2441,6 @@
     filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
   }
 
-  .brightness-\[0\.9\] {
-    --tw-brightness: brightness(.9);
-    filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
-  }
-
   .grayscale {
     --tw-grayscale: grayscale(100%);
     filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
@@ -2664,20 +2631,6 @@
   @media (hover: hover) {
     .group-hover\:opacity-100:is(:where(.group):hover *) {
       opacity: 1;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:brightness-100:is(:where(.group):hover *) {
-      --tw-brightness: brightness(100%);
-      filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:grayscale-0:is(:where(.group):hover *) {
-      --tw-grayscale: grayscale(0%);
-      filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
     }
   }
 
@@ -3172,13 +3125,6 @@
   @media (min-width: 48rem) {
     .md\:rounded-\[2\.5rem\] {
       border-radius: 2.5rem;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:border {
-      border-style: var(--tw-border-style);
-      border-width: 1px;
     }
   }
 

@@ -48,5 +48,12 @@ export const partners: Partner[] = [
 		logo: "/images/partners/logos/whitelist-logo.png",
 		description: "Creative talent agency connecting brands with exceptional artistic talent.",
 		website: "https://www.thewhitelist.nl/"
+	},
+	{
+		id: "7",
+		name: "Nextlane",
+		logo: "/images/partners/logos/nextlane.svg",
+		description: "Data-driven online marketing agency helping ambitious brands grow.",
+		website: "https://nextlaneagency.nl/en/"
 	}
 ];

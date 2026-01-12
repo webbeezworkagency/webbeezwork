@@ -43,6 +43,9 @@ export default function Home() {
             } else if (partner.name === "The Whitelist") {
               // Whitelist logo
               className = "h-12 w-auto object-contain";
+            } else if (partner.name === "Nextlane") {
+              // Nextlane logo
+              className = "h-10 w-auto object-contain dark:invert";
             }
 
             return {

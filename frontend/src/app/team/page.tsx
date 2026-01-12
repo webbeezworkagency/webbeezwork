@@ -84,6 +84,7 @@ export default function TeamPage() {
 										src={member.image}
 										alt={member.name}
 										fill
+										unoptimized
 										className="object-cover transition-transform duration-700 group-hover:scale-105"
 									/>
 									{/* Gradient Overlay */}
